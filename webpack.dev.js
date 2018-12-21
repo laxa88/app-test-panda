@@ -1,5 +1,6 @@
 const path = require("path");
 
+const autoprefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const paths = {
@@ -32,6 +33,41 @@ module.exports = () => {
 
     module: {
       rules: [
+        // Parses CSS as modules with unique localIdentName,
+        // which prevents CSS pollution between components.
+        {
+          test: /\.css$/,
+          use: [
+            // Load CSS files
+            { loader: "style-loader" },
+
+            // Parse and link CSS contents
+            // https://github.com/webpack-contrib/css-loader
+            {
+              loader: require.resolve("css-loader"),
+              options: {
+                importLoaders: 1,
+                sourceMap: true,
+                modules: true,
+                localIdentName: "[name]__[local]__[hash:base64:5]"
+              }
+            },
+
+            // Post-process CSS contents
+            // https://github.com/postcss/postcss-loader
+            // https://github.com/postcss/autoprefixer
+            // Notes:
+            // - 'postcss-loader' uses 'autoprefixer' as a plugin
+            {
+              loader: "postcss-loader",
+              options: {
+                plugins: () => [autoprefixer]
+              }
+            }
+          ]
+        },
+
+        // Parse JS and JSX files with babel
         {
           test: /\.(jsx|js)?$/,
           exclude: /node_modules/,
