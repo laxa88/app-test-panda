@@ -19,6 +19,8 @@ module.exports = () => {
   const config = {
     mode: "development",
 
+    devtool: "source-map",
+
     entry: "./src/index.js",
 
     context: paths.src, // Base directory for resolving loaders
