@@ -37,7 +37,10 @@ module.exports = () => {
             {
               loader: "babel-loader",
               options: {
-                presets: ["@babel/react", "@babel/env"]
+                presets: [
+                  "@babel/react", // parses react-related syntax, e.g. JSX code
+                  "@babel/env" // parses ES6 code
+                ]
               }
             }
           ]
