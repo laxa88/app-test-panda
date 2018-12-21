@@ -28,6 +28,27 @@ module.exports = () => {
       filename: "bundle.js"
     },
 
+    module: {
+      rules: [
+        {
+          test: /\.(jsx|js)?$/,
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: "babel-loader",
+              options: {
+                presets: ["@babel/react", "@babel/env"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    resolve: {
+      extensions: [".js", ".jsx"]
+    },
+
     plugins: [HtmlWebpackPluginConfig]
   };
 
