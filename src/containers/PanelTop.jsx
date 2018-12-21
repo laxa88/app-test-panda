@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 
-const PanelTop = props => <div>Top panel</div>;
+const PanelTop = () => <div>Top panel</div>;
 
 export default PanelTop;

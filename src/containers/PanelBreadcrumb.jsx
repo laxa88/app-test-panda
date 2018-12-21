@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 
-const PanelBreadcrumb = props => <div>Breadcrumb panel</div>;
+const PanelBreadcrumb = () => <div>Breadcrumb panel</div>;
 
 export default PanelBreadcrumb;

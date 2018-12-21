@@ -1,34 +1,36 @@
-const path = require("path");
+const path = require('path');
 
-const autoprefixer = require("autoprefixer");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+/* eslint-disable import/no-extraneous-dependencies */
+const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+/* eslint-enable */
 
 const paths = {
   src: path.resolve(__dirname),
-  dist: path.resolve(__dirname, "dist")
+  dist: path.resolve(__dirname, 'dist'),
 };
 
 // Injects and links generated files into target template HTML
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: "./src/index.html", // input
-  filename: "index.html", // output
+  template: './src/index.html', // input
+  filename: 'index.html', // output
   hash: true, // adds hash behind file path to prevent caching
-  inject: true
+  inject: true,
 });
 
 module.exports = () => {
   const config = {
-    mode: "development",
+    mode: 'development',
 
-    devtool: "source-map",
+    devtool: 'source-map',
 
-    entry: "./src/index.js",
+    entry: './src/index.jsx',
 
     context: paths.src, // Base directory for resolving loaders
 
     output: {
       path: paths.dist,
-      filename: "bundle.js"
+      filename: 'bundle.js',
     },
 
     module: {
@@ -39,18 +41,18 @@ module.exports = () => {
           test: /\.css$/,
           use: [
             // Load CSS files
-            { loader: "style-loader" },
+            { loader: 'style-loader' },
 
             // Parse and link CSS contents
             // https://github.com/webpack-contrib/css-loader
             {
-              loader: require.resolve("css-loader"),
+              loader: require.resolve('css-loader'),
               options: {
                 importLoaders: 1,
                 sourceMap: true,
                 modules: true,
-                localIdentName: "[name]__[local]__[hash:base64:5]"
-              }
+                localIdentName: '[name]__[local]__[hash:base64:5]',
+              },
             },
 
             // Post-process CSS contents
@@ -59,12 +61,12 @@ module.exports = () => {
             // Notes:
             // - 'postcss-loader' uses 'autoprefixer' as a plugin
             {
-              loader: "postcss-loader",
+              loader: 'postcss-loader',
               options: {
-                plugins: () => [autoprefixer]
-              }
-            }
-          ]
+                plugins: () => [autoprefixer],
+              },
+            },
+          ],
         },
 
         // Parse JS and JSX files with babel
@@ -73,24 +75,24 @@ module.exports = () => {
           exclude: /node_modules/,
           use: [
             {
-              loader: "babel-loader",
+              loader: 'babel-loader',
               options: {
                 presets: [
-                  "@babel/react", // parses react-related syntax, e.g. JSX code
-                  "@babel/env" // parses ES6 code
-                ]
-              }
-            }
-          ]
-        }
-      ]
+                  '@babel/react', // parses react-related syntax, e.g. JSX code
+                  '@babel/env', // parses ES6 code
+                ],
+              },
+            },
+          ],
+        },
+      ],
     },
 
     resolve: {
-      extensions: [".js", ".jsx"]
+      extensions: ['.js', '.jsx'],
     },
 
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [HtmlWebpackPluginConfig],
   };
 
   return config;
