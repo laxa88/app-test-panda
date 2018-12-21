@@ -4,6 +4,7 @@
   "description": "Coding test",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
     "test": "rm -Rf coverage && jest --coverage"
   },
   "author": "LWY",
