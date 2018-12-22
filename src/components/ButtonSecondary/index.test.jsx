@@ -15,18 +15,18 @@ describe('<ButtonSecondary />', () => {
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      currentTheme.tertiaryColor,
+      currentTheme.secondaryColor1,
     );
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      currentTheme.quaternaryColor,
+      currentTheme.secondaryColor2,
       { modifier: ':hover' },
     );
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      currentTheme.tertiaryColor,
+      currentTheme.secondaryColor1,
       { modifier: ':disabled:hover' },
     );
   });
@@ -35,8 +35,8 @@ describe('<ButtonSecondary />', () => {
     const spy = jest.fn();
 
     const mockTheme = {
-      tertiaryColor: 'dummy-color-1',
-      quaternaryColor: 'dummy-color-2',
+      secondaryColor1: 'dummy-color-1',
+      secondaryColor2: 'dummy-color-2',
     };
 
     const result = renderer.create(
@@ -47,18 +47,18 @@ describe('<ButtonSecondary />', () => {
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      mockTheme.tertiaryColor,
+      mockTheme.secondaryColor1,
     );
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      mockTheme.quaternaryColor,
+      mockTheme.secondaryColor2,
       { modifier: ':hover' },
     );
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      mockTheme.tertiaryColor,
+      mockTheme.secondaryColor1,
       { modifier: ':disabled:hover' },
     );
   });

@@ -13,7 +13,7 @@ class PanelBreadcrumb extends React.PureComponent {
       <div className={css.body}>
         <FontAwesomeIcon
           className={css.homeIcon}
-          color={theme.primaryColor}
+          color={theme.primaryColor1}
           icon={['fas', 'home']}
         />
 

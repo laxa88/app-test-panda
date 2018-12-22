@@ -5,11 +5,11 @@ import { ThemeContext } from '../../theme';
 
 const StyledButton = styled.button`
   color: white;
-  background-color: ${props => props.theme.primaryColor};
+  background-color: ${props => props.theme.primaryColor1};
 
   :hover {
     cursor: pointer;
-    background-color: ${props => props.theme.secondaryColor};
+    background-color: ${props => props.theme.primaryColor2};
   }
 
   :disabled {
@@ -18,7 +18,7 @@ const StyledButton = styled.button`
 
   :disabled:hover {
     cursor: default;
-    background-color: ${props => props.theme.primaryColor};
+    background-color: ${props => props.theme.primaryColor1};
   }
 `;
 

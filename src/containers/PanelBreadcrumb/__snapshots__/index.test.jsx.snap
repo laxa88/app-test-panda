@@ -21,7 +21,7 @@ exports[`<PanelBreadcrumb /> renders 1`] = `
   </a>
   Mocked_FontAwesomeIcon (fas,chevron-right)
   <div
-    className="link sc-bdVaJa GzXNe"
+    className="link sc-bdVaJa hcEiKe"
     href="/"
   >
     Current page

@@ -15,18 +15,18 @@ describe('<Button />', () => {
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      currentTheme.primaryColor,
+      currentTheme.primaryColor1,
     );
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      currentTheme.secondaryColor,
+      currentTheme.primaryColor2,
       { modifier: ':hover' },
     );
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      currentTheme.primaryColor,
+      currentTheme.primaryColor1,
       { modifier: ':disabled:hover' },
     );
   });
@@ -35,8 +35,8 @@ describe('<Button />', () => {
     const spy = jest.fn();
 
     const mockTheme = {
-      primaryColor: 'dummy-color-1',
-      secondaryColor: 'dummy-color-2',
+      primaryColor1: 'dummy-color-1',
+      primaryColor2: 'dummy-color-2',
     };
 
     const result = renderer.create(
@@ -47,18 +47,18 @@ describe('<Button />', () => {
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      mockTheme.primaryColor,
+      mockTheme.primaryColor1,
     );
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      mockTheme.secondaryColor,
+      mockTheme.primaryColor2,
       { modifier: ':hover' },
     );
 
     expect(result.toJSON()).toHaveStyleRule(
       'background-color',
-      mockTheme.primaryColor,
+      mockTheme.primaryColor1,
       { modifier: ':disabled:hover' },
     );
   });

@@ -35,7 +35,7 @@ class PanelCategory extends React.PureComponent {
             value={{
               theme: {
                 ...theme,
-                quaternaryColor: theme.primaryColor,
+                textColor1: theme.primaryColor1,
               },
             }}
           >

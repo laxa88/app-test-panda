@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import { ThemeContext } from '../../theme';
 
 const StyledDisabledLink = styled.div`
-  color: ${props => props.theme.primaryColor};
+  color: ${props => props.theme.textColor1};
   display: initial;
   opacity: 0.5;
 `;
 
 const StyledLink = styled.a`
-  color: ${props => props.theme.primaryColor};
+  color: ${props => props.theme.primaryColor1};
   text-decoration: none;
 
   :hover {

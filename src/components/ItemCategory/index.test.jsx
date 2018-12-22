@@ -7,10 +7,9 @@ import ItemCategory from './index';
 describe('<ItemCategory />', () => {
   it('renders (default)', () => {
     const mockTheme = {
-      primaryColor: 'dummy-color-1',
-      secondaryColor: 'dummy-color-2',
-      tertiaryColor: 'dummy-color-3',
-      quaternaryColor: 'dummy-color-4',
+      primaryColor1: 'dummy-color-1',
+      textColor1: 'dummy-color-2',
+      textColor2: 'dummy-color-3',
     };
 
     const mockProps = {
@@ -29,13 +28,13 @@ describe('<ItemCategory />', () => {
     const text1 = result.root.findByProps({ className: 'text1' });
     const text2 = result.root.findByProps({ className: 'text2' });
 
-    expect(icon.props.color).toBe(mockTheme.quaternaryColor);
+    expect(icon.props.color).toBe(mockTheme.primaryColor1);
     expect(icon.props.icon).toBe(mockProps.faIcon);
 
-    expect(text1.props.style.color).toBe(mockTheme.tertiaryColor);
+    expect(text1.props.style.color).toBe(mockTheme.textColor2);
     expect(text1.props.children).toBe(mockProps.text1);
 
-    expect(text2.props.style.color).toBe(mockTheme.quaternaryColor);
+    expect(text2.props.style.color).toBe(mockTheme.textColor1);
     expect(text2.props.children).toBe(mockProps.text2);
   });
 });
