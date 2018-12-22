@@ -2,6 +2,7 @@ import { configure } from "@storybook/react";
 
 // Import font-awesome into storybook :)
 import "../src/icons";
+import "../src/index.css";
 
 function loadStories() {
   require("../stories/Link.jsx");
