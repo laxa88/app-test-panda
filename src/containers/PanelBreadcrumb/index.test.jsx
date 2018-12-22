@@ -6,6 +6,6 @@ import PanelBreadcrumb from './index';
 describe('<PanelBreadcrumb />', () => {
   it('renders', () => {
     const result = renderer.create(<PanelBreadcrumb />);
-    expect(result.toJSON()).toMatchSnapshot();
+    expect(result).toMatchSnapshot();
   });
 });

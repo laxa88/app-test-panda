@@ -6,6 +6,6 @@ import MenuUser from './index';
 describe('<MenuUser />', () => {
   it('renders', () => {
     const result = renderer.create(<MenuUser />);
-    expect(result.toJSON()).toMatchSnapshot();
+    expect(result).toMatchSnapshot();
   });
 });

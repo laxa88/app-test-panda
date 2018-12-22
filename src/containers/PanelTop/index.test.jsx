@@ -6,6 +6,6 @@ import PanelTop from './index';
 describe('<PanelTop />', () => {
   it('renders', () => {
     const result = renderer.create(<PanelTop />);
-    expect(result.toJSON().props).toEqual({ className: 'body' });
+    expect(result).toMatchSnapshot();
   });
 });

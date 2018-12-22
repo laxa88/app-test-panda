@@ -6,6 +6,6 @@ import MenuApp from './index';
 describe('<MenuApp />', () => {
   it('renders', () => {
     const result = renderer.create(<MenuApp />);
-    expect(result.toJSON()).toMatchSnapshot();
+    expect(result).toMatchSnapshot();
   });
 });
