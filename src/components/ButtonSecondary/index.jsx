@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { ThemeContext } from '../../theme';
 
 const StyledButton = styled.button`
+  color: black;
   background-color: ${props => props.theme.tertiaryColor};
 
   :hover {
@@ -15,19 +16,19 @@ const StyledButton = styled.button`
     opacity: 0.5;
   }
 
-  :hover:disabled {
+  :disabled:hover {
     cursor: default;
     background-color: ${props => props.theme.tertiaryColor};
   }
 `;
 
-class Button extends React.PureComponent {
+class ButtonSecondary extends React.PureComponent {
   render() {
     const { theme } = this.context;
     return <StyledButton {...this.props} theme={theme} />;
   }
 }
 
-Button.contextType = ThemeContext;
+ButtonSecondary.contextType = ThemeContext;
 
-export default Button;
+export default ButtonSecondary;
