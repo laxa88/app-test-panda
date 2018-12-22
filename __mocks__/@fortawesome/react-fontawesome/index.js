@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
 
-export function FontAwesomeIcon() {
-  return 'Mocked_FontAwesomeIcon';
+export function FontAwesomeIcon(props) {
+  return `Mocked_FontAwesomeIcon (${props.icon})`;
 }

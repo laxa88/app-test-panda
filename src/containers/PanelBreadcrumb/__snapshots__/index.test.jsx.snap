@@ -4,22 +4,22 @@ exports[`<PanelBreadcrumb /> renders 1`] = `
 <div
   className="body"
 >
-  Mocked_FontAwesomeIcon
-  Mocked_FontAwesomeIcon
+  Mocked_FontAwesomeIcon (fas,home)
+  Mocked_FontAwesomeIcon (fas,chevron-right)
   <a
     className="link sc-bwzfXH kxbnci"
     href="/"
   >
     Page 1
   </a>
-  Mocked_FontAwesomeIcon
+  Mocked_FontAwesomeIcon (fas,chevron-right)
   <a
     className="link sc-bwzfXH kxbnci"
     href="/"
   >
     Breadcrumb
   </a>
-  Mocked_FontAwesomeIcon
+  Mocked_FontAwesomeIcon (fas,chevron-right)
   <div
     className="link sc-bdVaJa GzXNe"
     href="/"

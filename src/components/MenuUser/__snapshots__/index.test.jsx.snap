@@ -2,7 +2,7 @@
 
 exports[`<MenuUser /> renders 1`] = `
 <div>
-  Mocked_FontAwesomeIcon
+  Mocked_FontAwesomeIcon (fas,user)
   John | Log out
 </div>
 `;

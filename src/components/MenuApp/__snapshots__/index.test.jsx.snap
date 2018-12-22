@@ -2,7 +2,7 @@
 
 exports[`<MenuApp /> renders 1`] = `
 <div>
-  Mocked_FontAwesomeIcon
+  Mocked_FontAwesomeIcon (fas,bars)
   Dummy App
 </div>
 `;
