@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PanelBreadcrumb /> renders 1`] = `
+<div
+  className="body"
+>
+  Mocked_FontAwesomeIcon
+  Mocked_FontAwesomeIcon
+  <a
+    className="link sc-bwzfXH kxbnci"
+    href="/"
+  >
+    Page 1
+  </a>
+  Mocked_FontAwesomeIcon
+  <a
+    className="link sc-bwzfXH kxbnci"
+    href="/"
+  >
+    Breadcrumb
+  </a>
+  Mocked_FontAwesomeIcon
+  <div
+    className="link sc-bdVaJa GzXNe"
+    href="/"
+  >
+    Current page
+  </div>
+</div>
+`;

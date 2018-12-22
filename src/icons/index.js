@@ -9,6 +9,7 @@ import {
 import {
   faBars,
   faBicycle,
+  faChevronRight,
   faHome,
   faPuzzlePiece,
   faRecycle,
@@ -18,6 +19,7 @@ import {
 library.add(
   faBars,
   faBicycle,
+  faChevronRight,
   faFutbol,
   faHome,
   faLifeRing,
