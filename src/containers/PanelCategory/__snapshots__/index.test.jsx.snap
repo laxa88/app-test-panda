@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PanelCategory /> renders 1`] = `
+<div
+  className="body"
+>
+  <div
+    className="left"
+  >
+    <div
+      className="body"
+    >
+      Mocked_FontAwesomeIcon (fas,puzzle-piece)
+      <div
+        className="text1"
+        style={
+          Object {
+            "color": "#DDDDDD",
+          }
+        }
+      >
+        Sector
+      </div>
+      <div
+        className="text2"
+        style={
+          Object {
+            "color": "#999999",
+          }
+        }
+      >
+        Sports
+      </div>
+    </div>
+    <div
+      className="body"
+    >
+      Mocked_FontAwesomeIcon (far,futbol)
+      <div
+        className="text1"
+        style={
+          Object {
+            "color": "#DDDDDD",
+          }
+        }
+      >
+        Sport Type
+      </div>
+      <div
+        className="text2"
+        style={
+          Object {
+            "color": "#999999",
+          }
+        }
+      >
+        Bicycles
+      </div>
+    </div>
+    <div
+      className="body"
+    >
+      Mocked_FontAwesomeIcon (fas,bicycle)
+      <div
+        className="text1"
+        style={
+          Object {
+            "color": "#DDDDDD",
+          }
+        }
+      >
+        Mode
+      </div>
+      <div
+        className="text2"
+        style={
+          Object {
+            "color": "#999999",
+          }
+        }
+      >
+        Mountain Cross
+      </div>
+    </div>
+  </div>
+  <div
+    className="right"
+  >
+    <div
+      className="body"
+    >
+      Mocked_FontAwesomeIcon (fas,recycle)
+      <div
+        className="text1"
+        style={
+          Object {
+            "color": "#DDDDDD",
+          }
+        }
+      >
+        Responsibility
+      </div>
+      <div
+        className="text2"
+        style={
+          Object {
+            "color": "#33A00E",
+          }
+        }
+      >
+        Go Green!
+      </div>
+    </div>
+  </div>
+</div>
+`;
