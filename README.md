@@ -24,6 +24,20 @@ For library versions, refer to `package.json`.
 
 ## Development Notes
 
+### Using Storybook to develop components
+
+When writing components, it is impractical to use an existing page within the app as placeholder for work-in-progress. Storybook helps provide a sandboxed and organised environment for such a situation.
+
+1. Write the initial component.
+
+2. Add a story in `/stories`
+
+3. `require` the story in `.storybook/config.js`
+
+4. Start the Storybook server by running `npm run storybook`. The browser should automatically open with Storybook (default: `localhost:9001`), with hot-reloading.
+
+5. Continue developing the component and checking against the result in Storybook.
+
 ### Mocking files for Jest
 
 To mock any file, add a `__mocks__` folder adjacent to the folder being mocked, and add the folder and files with the same name as the file being mocked.
