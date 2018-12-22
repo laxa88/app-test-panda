@@ -1,12 +1,13 @@
 import React from 'react';
 
 export const panda = {
-  primaryColor1: '#33A00E', // for buttons, icons, links, etc.
+  primaryColor1: '#33A00E', // for buttons, icons, links
   primaryColor2: '#C5DFBC', // for hover state
-  primaryColor3: '#34A00F', // for active state or darker elements
+  primaryColor3: '#34A00F', // for backgrounds
 
   secondaryColor1: '#DDDDDD', // for cancel buttons
-  secondaryColor2: '#999999', // for icons
+  secondaryColor2: '#999999', // for icons, borders
+  secondaryColor3: '#F0F0F0', // for backgrounds
 
   textColor1: '#333333', // main text
   textColor2: '#A4A4A4', // secondary text

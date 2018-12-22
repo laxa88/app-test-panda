@@ -9,7 +9,13 @@ class PanelCategory extends React.PureComponent {
     const { theme } = this.context;
 
     return (
-      <div className={css.body}>
+      <div
+        style={{
+          backgroundColor: theme.secondaryColor3,
+          borderTop: `1px solid ${theme.secondaryColor1}`,
+        }}
+        className={css.body}
+      >
         <div className={css.left}>
           <ItemCategory
             faIcon={['fas', 'puzzle-piece']}

@@ -3,6 +3,12 @@
 exports[`<PanelCategory /> renders 1`] = `
 <div
   className="body"
+  style={
+    Object {
+      "backgroundColor": "#F0F0F0",
+      "borderTop": "1px solid #DDDDDD",
+    }
+  }
 >
   <div
     className="left"
