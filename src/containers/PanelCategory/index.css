@@ -1,8 +1,12 @@
 .body {
+  display: flex;
+  height: 110px;
 }
 
 .left {
+  display: flex;
 }
 
 .right {
+  display: flex;
 }
