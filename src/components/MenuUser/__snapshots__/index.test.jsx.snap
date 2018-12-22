@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuUser /> renders 1`] = `
+<div>
+  Mocked_FontAwesomeIcon
+  John | Log out
+</div>
+`;
