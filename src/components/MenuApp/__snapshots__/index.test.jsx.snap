@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuApp /> renders 1`] = `
+<div>
+  Mocked_FontAwesomeIcon
+  Dummy App
+</div>
+`;
