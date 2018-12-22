@@ -1,9 +1,11 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
+
 import {
   faFutbol,
   faLifeRing,
   faTrashAlt,
 } from '@fortawesome/free-regular-svg-icons';
+
 import {
   faBars,
   faBicycle,
