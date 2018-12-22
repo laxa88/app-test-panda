@@ -7,9 +7,7 @@ import { currentTheme, ThemeContext } from '../../theme';
 
 describe('<Button />', () => {
   it('renders (default)', () => {
-    const spy = jest.fn();
-
-    const result = renderer.create(<Button onClick={spy} />);
+    const result = renderer.create(<Button />);
 
     expect(result.toJSON().type).toBe('button');
 
@@ -32,8 +30,6 @@ describe('<Button />', () => {
   });
 
   it('renders (themed)', () => {
-    const spy = jest.fn();
-
     const mockTheme = {
       primaryColor1: 'dummy-color-1',
       primaryColor2: 'dummy-color-2',
@@ -41,7 +37,7 @@ describe('<Button />', () => {
 
     const result = renderer.create(
       <ThemeContext.Provider value={{ theme: mockTheme }}>
-        <Button onClick={spy} />
+        <Button />
       </ThemeContext.Provider>,
     );
 
