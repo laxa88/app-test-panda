@@ -1,5 +1,14 @@
 import React from 'react';
 
-const PanelTop = () => <div>Top panel</div>;
+import css from './index.css';
+import MenuApp from '../../components/MenuApp';
+import MenuUser from '../../components/MenuUser';
+
+const PanelTop = () => (
+  <div className={css.body}>
+    <MenuApp />
+    <MenuUser />
+  </div>
+);
 
 export default PanelTop;
