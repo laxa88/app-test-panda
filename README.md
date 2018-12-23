@@ -50,6 +50,10 @@ You can also configure ESLint in VSCode settings via `CTRL + ,` / `CMD + ,`. The
 "eslint.enable": true,
 ```
 
+### Testing
+
+Run `npm run test` to run unit tests once. You can instead use `npm run test --watch` which will automatically run tests whenever files are changed.
+
 ### Mocking files for Jest
 
 To mock any file, add a `__mocks__` folder adjacent to the folder being mocked, and add the folder and files with the same name as the file being mocked.
