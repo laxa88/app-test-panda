@@ -1,0 +1,32 @@
+import React from 'react';
+import renderer from 'react-test-renderer';
+import 'jest-styled-components';
+
+import Body from './Body';
+import { currentTheme } from '../../theme';
+
+describe('<Body />', () => {
+  beforeEach(() => {
+    jest.spyOn(React, 'createRef').mockReturnValue({
+      current: {},
+    });
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it('renders', () => {
+    const result = renderer.create(<Body />);
+
+    expect(result.toJSON().type).toBe('div');
+    expect(result.toJSON()).toHaveStyleRule('color', currentTheme.textColor1);
+  });
+
+  it('renders (opened)', () => {
+    const result = renderer.create(<Body isOpen />);
+
+    expect(result.toJSON().type).toBe('div');
+    expect(result.toJSON()).toHaveStyleRule('color', currentTheme.textColor1);
+  });
+});
