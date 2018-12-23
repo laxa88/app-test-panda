@@ -20,6 +20,7 @@ export const sakura = {
 
   secondaryColor1: '#DDDDDD',
   secondaryColor2: '#999999',
+  secondaryColor3: '#F0F0F0',
 
   textColor1: '#6d0000',
   textColor2: '#ffe2e2',
