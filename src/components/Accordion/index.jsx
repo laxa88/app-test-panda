@@ -6,12 +6,12 @@ import styled from 'styled-components';
 import { ThemeContext } from '../../theme';
 import Body from './Body';
 
-const StyledContainer = styled.div`
+export const StyledContainer = styled.div`
   border: 1px solid ${props => props.theme.secondaryColor2};
   width: 100%;
 `;
 
-const StyledHeader = styled.button`
+export const StyledHeader = styled.button`
   background-color: ${props => props.theme.secondaryColor3};
   display: flex;
   width: 100%;
@@ -21,7 +21,7 @@ const StyledHeader = styled.button`
   }
 `;
 
-const StyledArrow = styled.div`
+export const StyledArrow = styled.div`
   color: ${props => props.theme.primaryColor1};
   position: absolute;
   right: 0;
