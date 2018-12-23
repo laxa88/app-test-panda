@@ -19,6 +19,11 @@ class Accordion extends React.Component {
   }
 
   /* istanbul ignore next */
+  componentWillMount() {
+    window.addEventListener('resize', this.updateHeight);
+  }
+
+  /* istanbul ignore next */
   componentDidMount() {
     // This is for when "isOpen" is open by default.
     // React "ref" is only obtained AFTER the component is mounted,
@@ -28,6 +33,15 @@ class Accordion extends React.Component {
       this.forceUpdate();
     }, 100);
   }
+
+  /* istanbul ignore next */
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateHeight);
+  }
+
+  updateHeight = () => {
+    this.forceUpdate();
+  };
 
   render() {
     const { theme } = this.context;

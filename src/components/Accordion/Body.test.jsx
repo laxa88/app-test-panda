@@ -29,4 +29,16 @@ describe('<Body />', () => {
     expect(result.toJSON().type).toBe('div');
     expect(result.toJSON()).toHaveStyleRule('color', currentTheme.textColor1);
   });
+
+  it('triggers updateHeight', () => {
+    const result = renderer.create(<Body />);
+
+    const spy = jest.spyOn(result.getInstance(), 'forceUpdate');
+
+    expect(spy).toHaveBeenCalledTimes(0);
+
+    result.getInstance().updateHeight();
+
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
 });
