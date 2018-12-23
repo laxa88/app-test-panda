@@ -61,3 +61,8 @@ To mock any file, add a `__mocks__` folder adjacent to the folder being mocked, 
 An example is `__mocks__/@fortawesome/react-fontawesome/` which mocks FontAwesomeIcon, such that actual icons are not loaded and rendered in test snapshots.
 
 For further info: [https://jestjs.io/docs/en/manual-mocks](https://jestjs.io/docs/en/manual-mocks)
+
+### Improvements to consider
+
+- Make app mobile-compatible
+- Add eslint rule to sort imports
