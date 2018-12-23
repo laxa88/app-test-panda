@@ -66,3 +66,4 @@ For further info: [https://jestjs.io/docs/en/manual-mocks](https://jestjs.io/doc
 
 - Make app mobile-compatible
 - Add eslint rule to sort imports
+- Add prettier
