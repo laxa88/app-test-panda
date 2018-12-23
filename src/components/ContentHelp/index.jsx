@@ -6,8 +6,17 @@ import Accordion from '../Accordion';
 import { currentTheme } from '../../theme';
 
 export const StyledBody = styled.div`
+  padding: 20px;
+
   & svg {
     color: ${props => props.theme.secondaryColor2};
+    font-size: 110px;
+    float: left;
+    padding: 0 20px 20px 0;
+  }
+
+  & p {
+    font-size: 14px;
   }
 `;
 
@@ -26,12 +35,14 @@ const Body = (
     <p>
       Pellentesque habitant morbi tristique senectus et netus et malesuada fames
       ac turpis egestas. Phasellus ac magna vehicula enim vestibulum finibus sed
-      ut sem. In hac habitasse platea dictumst.
+      ut sem. In hac habitasse platea dictumst. Donec porttitor nisi vitae quam
+      dapibus, vel posuere purus mollis. Integer ut rhoncus odio.
     </p>
 
     <p>
       Donec porttitor nisi vitae quam dapibus, vel posuere purus mollis. Integer
-      ut rhoncus odio.
+      ut rhoncus odio. Nulla sit amet facilisis dolor, sit amet sagittis ante.
+      Nam non felis in ipsum lacinia blandit.
     </p>
   </StyledBody>
 );
