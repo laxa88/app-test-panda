@@ -10,6 +10,7 @@ function loadStories() {
   require("../stories/ButtonSecondary.jsx");
   require("../stories/Checkbox.jsx");
   require("../stories/Input.jsx");
+  require("../stories/InputWithInstructions.jsx");
   require("../stories/ItemCategory.jsx");
   require("../stories/Link.jsx");
   require("../stories/RadioGroup.jsx");
