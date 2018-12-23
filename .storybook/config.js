@@ -12,6 +12,7 @@ function loadStories() {
   require("../stories/Input.jsx");
   require("../stories/InputWithInstructions.jsx");
   require("../stories/ItemCategory.jsx");
+  require("../stories/Label.jsx");
   require("../stories/Link.jsx");
   require("../stories/RadioGroup.jsx");
   require("../stories/Table.jsx");
