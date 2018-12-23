@@ -38,6 +38,18 @@ When writing components, it is impractical to use an existing page within the ap
 
 5. Continue developing the component and checking against the result in Storybook.
 
+### Linting
+
+Install `ESLint` plugin for VSCode. It should detect this project's `.eslintrc.js` file's rules. You will be able to see warnings and errors when developing code.
+
+You can also configure ESLint in VSCode settings via `CTRL + ,` / `CMD + ,`. The rules currently used by me are:
+
+```js
+"files.trimTrailingWhitespace": true,
+"eslint.autoFixOnSave": true,
+"eslint.enable": true,
+```
+
 ### Mocking files for Jest
 
 To mock any file, add a `__mocks__` folder adjacent to the folder being mocked, and add the folder and files with the same name as the file being mocked.

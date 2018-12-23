@@ -4,6 +4,7 @@
   "description": "Coding test",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --cache --ext .js,.jsx src",
     "start": "webpack-dev-server --config webpack.dev.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "rm -Rf coverage && jest --coverage"
