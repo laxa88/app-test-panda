@@ -1,4 +1,8 @@
 .body {
+  align-items: center;
   border-bottom: 2px solid #ccc;
-  height: 60px;
+  display: flex;
+  height: 58px;
+  justify-content: space-between;
+  padding: 0 38px;
 }
