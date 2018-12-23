@@ -13,6 +13,7 @@ function loadStories() {
   require("../stories/ItemCategory.jsx");
   require("../stories/Link.jsx");
   require("../stories/RadioGroup.jsx");
+  require("../stories/Table.jsx");
 }
 
 configure(loadStories, module);
