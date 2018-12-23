@@ -12,6 +12,14 @@
   "author": "LWY",
   "license": "ISC",
   "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    },
     "moduleNameMapper": {
       "\\.css$": "identity-obj-proxy"
     }
