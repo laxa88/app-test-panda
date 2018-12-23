@@ -1,11 +1,25 @@
 .body {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .icon {
+  font-size: 30px;
+  display: flex;
+  padding-right: 10px;
+}
+
+.text1,
+.text2 {
+  min-width: 65px;
 }
 
 .text1 {
+  font-size: 12px;
 }
 
 .text2 {
+  font-size: 14px;
+  font-weight: bold;
 }
