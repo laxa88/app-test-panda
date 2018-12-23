@@ -1,6 +1,8 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import {
+  faDotCircle,
+  faCircle,
   faFutbol,
   faLifeRing,
   faTrashAlt,
@@ -22,6 +24,8 @@ library.add(
   faBicycle,
   faCheck,
   faChevronRight,
+  faCircle,
+  faDotCircle,
   faFutbol,
   faHome,
   faLifeRing,
