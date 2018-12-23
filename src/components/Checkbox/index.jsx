@@ -58,15 +58,19 @@ class Checkbox extends React.PureComponent {
 
     const content = checked ? (
       <StyledCheck>
-        <FontAwesomeIcon
-          color={theme.textColor1}
-          icon={['fas', 'check']}
-        />
+        <FontAwesomeIcon color={theme.textColor1} icon={['fas', 'check']} />
       </StyledCheck>
-    ) : undefined;
+    ) : (
+      undefined
+    );
 
     return (
-      <StyledBox theme={theme} checked={checked} disabled={disabled} onClick={this.handleOnChange}>
+      <StyledBox
+        theme={theme}
+        checked={checked}
+        disabled={disabled}
+        onClick={this.handleOnChange}
+      >
         {content}
       </StyledBox>
     );
