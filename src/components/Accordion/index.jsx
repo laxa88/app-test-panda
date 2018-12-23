@@ -9,6 +9,9 @@ import Body from './Body';
 export const StyledContainer = styled.div`
   border: 1px solid ${props => props.theme.secondaryColor2};
   width: 100%;
+  border-radius: 5px;
+  margin: 20px 0;
+  overflow: hidden;
 `;
 
 export const StyledHeader = styled.button`
@@ -16,6 +19,8 @@ export const StyledHeader = styled.button`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 55px;
+  padding: 0 20px;
 
   :hover {
     cursor: pointer;
@@ -24,6 +29,11 @@ export const StyledHeader = styled.button`
 
 export const StyledArrow = styled.div`
   color: ${props => props.theme.primaryColor1};
+  font-size: 12px;
+
+  & svg {
+    padding-left: 10px;
+  }
 `;
 
 class Accordion extends React.PureComponent {
