@@ -28,8 +28,8 @@ describe('<ItemCategory />', () => {
     const text1 = result.root.findByProps({ className: 'text1' });
     const text2 = result.root.findByProps({ className: 'text2' });
 
-    expect(icon.props.color).toBe(mockTheme.primaryColor1);
-    expect(icon.props.icon).toBe(mockProps.faIcon);
+    expect(icon.props.style.color).toBe(mockTheme.primaryColor1);
+    expect(icon.findByProps({ icon: mockProps.faIcon })).toBeTruthy();
 
     expect(text1.props.style.color).toBe(mockTheme.textColor2);
     expect(text1.props.children).toBe(mockProps.text1);

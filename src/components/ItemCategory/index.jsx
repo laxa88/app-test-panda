@@ -12,11 +12,9 @@ class ItemCategory extends React.PureComponent {
 
     return (
       <div className={css.body}>
-        <FontAwesomeIcon
-          color={theme.primaryColor1}
-          className={css.icon}
-          icon={faIcon}
-        />
+        <div style={{ color: theme.primaryColor1 }} className={css.icon}>
+          <FontAwesomeIcon icon={faIcon} />
+        </div>
 
         <div style={{ color: theme.textColor2 }} className={css.text1}>
           {text1}

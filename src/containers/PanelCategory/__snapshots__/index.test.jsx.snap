@@ -16,7 +16,16 @@ exports[`<PanelCategory /> renders 1`] = `
     <div
       className="body"
     >
-      Mocked_FontAwesomeIcon (fas,puzzle-piece)
+      <div
+        className="icon"
+        style={
+          Object {
+            "color": "#33A00E",
+          }
+        }
+      >
+        Mocked_FontAwesomeIcon (fas,puzzle-piece)
+      </div>
       <div
         className="text1"
         style={
@@ -41,7 +50,16 @@ exports[`<PanelCategory /> renders 1`] = `
     <div
       className="body"
     >
-      Mocked_FontAwesomeIcon (far,futbol)
+      <div
+        className="icon"
+        style={
+          Object {
+            "color": "#33A00E",
+          }
+        }
+      >
+        Mocked_FontAwesomeIcon (far,futbol)
+      </div>
       <div
         className="text1"
         style={
@@ -66,7 +84,16 @@ exports[`<PanelCategory /> renders 1`] = `
     <div
       className="body"
     >
-      Mocked_FontAwesomeIcon (fas,bicycle)
+      <div
+        className="icon"
+        style={
+          Object {
+            "color": "#33A00E",
+          }
+        }
+      >
+        Mocked_FontAwesomeIcon (fas,bicycle)
+      </div>
       <div
         className="text1"
         style={
@@ -95,7 +122,16 @@ exports[`<PanelCategory /> renders 1`] = `
     <div
       className="body"
     >
-      Mocked_FontAwesomeIcon (fas,recycle)
+      <div
+        className="icon"
+        style={
+          Object {
+            "color": "#33A00E",
+          }
+        }
+      >
+        Mocked_FontAwesomeIcon (fas,recycle)
+      </div>
       <div
         className="text1"
         style={
