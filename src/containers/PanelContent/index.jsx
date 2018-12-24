@@ -1,26 +1,35 @@
 import React from 'react';
 
-import { ThemeContext } from '../../theme';
 import ContentHelp from '../../components/ContentHelp';
+import UserRegistration from '../Sections/UserRegistration';
+import BikersTable from '../Sections/BikersTable';
 
 import css from './index.css';
 
 class PanelContent extends React.PureComponent {
-  render() {
-    const { theme } = this.context;
+  handleOnClickSave = () => {
+    // todo
+  };
 
+  handleOnClickCancel = () => {
+    // todo
+  };
+
+  handleOnClickDelete = () => {
+    // todo
+  };
+
+  render() {
     return (
       <div className={css.body}>
         <ContentHelp />
 
-        <div>TODO User Registration Form</div>
+        <UserRegistration />
 
-        <div>TODO Bikers Table</div>
+        <BikersTable />
       </div>
     );
   }
 }
-
-PanelContent.contextType = ThemeContext;
 
 export default PanelContent;
