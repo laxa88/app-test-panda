@@ -9,6 +9,7 @@ function loadStories() {
   require("../stories/Button.jsx");
   require("../stories/ButtonSecondary.jsx");
   require("../stories/Checkbox.jsx");
+  require("../stories/CheckboxGroup.jsx");
   require("../stories/ContentHelp.jsx");
   require("../stories/Input.jsx");
   require("../stories/InputWithInstructions.jsx");
