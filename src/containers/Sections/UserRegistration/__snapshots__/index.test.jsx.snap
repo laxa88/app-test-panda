@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserRegistration /> renders 1`] = `
+<div>
+  <h1>
+    User Registration
+  </h1>
+  <div
+    className="leftSection"
+  >
+    <div>
+      <div
+        className="sc-bdVaJa kFqtFi"
+      >
+        Full name
+      </div>
+      <div>
+        <input
+          className="sc-bwzfXH dvuTee"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value=""
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        className="sc-bdVaJa kFqtFi"
+      >
+        E-mail
+      </div>
+      <div>
+        <input
+          className="sc-bwzfXH dvuTee"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value=""
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        className="sc-bdVaJa kFqtFi"
+      >
+        City
+      </div>
+      <div>
+        <input
+          className="sc-bwzfXH dvuTee"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="rightSection"
+  >
+    <div
+      className="optionsSection"
+    >
+      <div>
+        <div
+          className="sc-bdVaJa kFqtFi"
+        >
+          Ride in a group?
+        </div>
+        <div
+          className="sc-bZQynM kzlsZH"
+        >
+          <button
+            checked={false}
+            className="sc-bxivhb bIUrUU"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <div
+              className="sc-ifAKCX iJBtyr"
+            >
+              Mocked_FontAwesomeIcon (far,circle)
+            </div>
+            <div
+              className="sc-EHOje hxBsOR"
+            >
+              Always
+            </div>
+          </button>
+          <button
+            checked={false}
+            className="sc-bxivhb bIUrUU"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <div
+              className="sc-ifAKCX iJBtyr"
+            >
+              Mocked_FontAwesomeIcon (far,circle)
+            </div>
+            <div
+              className="sc-EHOje hxBsOR"
+            >
+              Sometimes
+            </div>
+          </button>
+          <button
+            checked={false}
+            className="sc-bxivhb bIUrUU"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <div
+              className="sc-ifAKCX iJBtyr"
+            >
+              Mocked_FontAwesomeIcon (far,circle)
+            </div>
+            <div
+              className="sc-EHOje hxBsOR"
+            >
+              Never
+            </div>
+          </button>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-bdVaJa kFqtFi"
+        >
+          Ride in a group?
+        </div>
+        <div
+          className="sc-dnqmqq iFsitv"
+        >
+          <div
+            className="sc-iwsKbI exZsDe"
+          >
+            <button
+              checked={false}
+              className="sc-gzVnrw cRRUTu"
+              disabled={false}
+              onClick={[Function]}
+            />
+            Sun
+          </div>
+          <div
+            className="sc-iwsKbI exZsDe"
+          >
+            <button
+              checked={false}
+              className="sc-gzVnrw cRRUTu"
+              disabled={false}
+              onClick={[Function]}
+            />
+            Mon
+          </div>
+          <div
+            className="sc-iwsKbI exZsDe"
+          >
+            <button
+              checked={false}
+              className="sc-gzVnrw cRRUTu"
+              disabled={false}
+              onClick={[Function]}
+            />
+            Tue
+          </div>
+          <div
+            className="sc-iwsKbI exZsDe"
+          >
+            <button
+              checked={false}
+              className="sc-gzVnrw cRRUTu"
+              disabled={false}
+              onClick={[Function]}
+            />
+            Wed
+          </div>
+          <div
+            className="sc-iwsKbI exZsDe"
+          >
+            <button
+              checked={false}
+              className="sc-gzVnrw cRRUTu"
+              disabled={false}
+              onClick={[Function]}
+            />
+            Thu
+          </div>
+          <div
+            className="sc-iwsKbI exZsDe"
+          >
+            <button
+              checked={false}
+              className="sc-gzVnrw cRRUTu"
+              disabled={false}
+              onClick={[Function]}
+            />
+            Fri
+          </div>
+          <div
+            className="sc-iwsKbI exZsDe"
+          >
+            <button
+              checked={false}
+              className="sc-gzVnrw cRRUTu"
+              disabled={false}
+              onClick={[Function]}
+            />
+            Sat
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="buttonsSection"
+    >
+      <button
+        className="sc-gqjmRU gbVcEs"
+        onClick={[Function]}
+      >
+        Cancel
+      </button>
+      <button
+        className="sc-gZMcBi iMbkRI"
+        onClick={[Function]}
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>
+`;

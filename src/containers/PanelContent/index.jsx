@@ -24,7 +24,10 @@ class PanelContent extends React.PureComponent {
       <div className={css.body}>
         <ContentHelp />
 
-        <UserRegistration />
+        <UserRegistration
+          onCancel={this.handleOnClickCancel}
+          onSave={this.handleOnClickSave}
+        />
 
         <BikersTable />
       </div>
