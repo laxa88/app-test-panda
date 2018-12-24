@@ -77,7 +77,7 @@ RadioGroup.propTypes = {
         PropTypes.number,
         PropTypes.bool,
       ]),
-      label: PropTypes.string,
+      label: PropTypes.node,
     }),
   ),
 };

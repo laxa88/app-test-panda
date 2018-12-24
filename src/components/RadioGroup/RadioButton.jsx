@@ -76,7 +76,7 @@ RadioButton.propTypes = {
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   index: PropTypes.number.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   labelSize: PropTypes.number,
   onClick: PropTypes.func,
   radioSize: PropTypes.number,
