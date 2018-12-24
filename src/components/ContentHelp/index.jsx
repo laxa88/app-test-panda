@@ -47,6 +47,6 @@ const Body = (
   </StyledBody>
 );
 
-const ContentHelp = () => <Accordion header="Help" body={Body} />;
+const ContentHelp = props => <Accordion header="Help" body={Body} {...props} />;
 
 export default ContentHelp;
