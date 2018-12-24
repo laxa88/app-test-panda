@@ -11,6 +11,8 @@ const devConfig = require("../webpack.dev.js");
 */
 
 module.exports = (baseConfig, env, defaultConfig) => {
-  defaultConfig.module.rules = devConfig().module.rules;
+
+  defaultConfig.module.rules = devConfig.module.rules;
+
   return defaultConfig;
 };
