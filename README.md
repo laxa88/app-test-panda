@@ -64,6 +64,7 @@ For further info: [https://jestjs.io/docs/en/manual-mocks](https://jestjs.io/doc
 
 ### Improvements to consider
 
+- Refactor: Move static CSS out of styled components
 - Make app mobile-compatible
 - Add eslint rule to sort imports
 - Add prettier
