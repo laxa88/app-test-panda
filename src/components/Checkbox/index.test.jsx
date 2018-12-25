@@ -37,6 +37,22 @@ describe('<Checkbox />', () => {
     expect(result.toJSON()).toHaveStyleRule('border-color', currentTheme.primaryColor1);
   });
 
+  it('triggers componentWillReceiveProps', () => {
+    const result = renderer.create(<Checkbox checked />);
+
+    const mockNextProps = { checked: 'dummy val' };
+
+    result.getInstance().componentWillReceiveProps(mockNextProps);
+
+    expect(result.getInstance().state.checked).toBe(mockNextProps.checked);
+
+    // triggering with same value again should do nothing
+
+    result.getInstance().componentWillReceiveProps(mockNextProps);
+
+    expect(result.getInstance().state.checked).toBe(mockNextProps.checked);
+  });
+
   it('triggers onChange', () => {
     const spy = jest.fn();
 

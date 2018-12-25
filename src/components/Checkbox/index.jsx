@@ -42,6 +42,14 @@ class Checkbox extends React.PureComponent {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    const { checked } = this.state;
+
+    if (nextProps.checked !== checked) {
+      this.setState({ checked: nextProps.checked });
+    }
+  }
+
   handleOnChange = () => {
     const { checked } = this.state;
     const newChecked = !checked;
