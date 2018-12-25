@@ -60,4 +60,94 @@ describe('<PanelContent />', () => {
 
     expect(result).toEqual(expected);
   });
+
+  it('triggers handleOnClickSave', () => {
+    const result = renderer.create(<PanelContent />);
+
+    const mockRowData = {
+      fullName: 'dummy SW name',
+      email: 'dummy_SW_name@starwarsfanboy.com',
+      city: 'dummy SW name\'s city',
+      rideInGroupIndex: 2,
+      daysOfTheWeekIndices: [true, true, true, true, true, true, true],
+      registrationDay: 'dummy format',
+    };
+
+    const mockTargetAddData = {
+      fullName: 'target SW name',
+      email: 'target_SW_name@starwarsfanboy.com',
+      city: 'target SW name\'s city',
+      rideInGroupIndex: 1,
+      daysOfTheWeekIndices: [],
+      registrationDay: 'target format',
+    };
+
+    const mockState = {
+      tableData: [
+        mockRowData,
+        mockRowData,
+      ],
+    };
+
+    const expected = {
+      tableData: [
+        mockRowData,
+        mockRowData,
+        mockTargetAddData,
+      ],
+    };
+
+    result.getInstance().setState(mockState);
+
+    result.getInstance().handleOnClickSave(mockTargetAddData);
+
+    expect(result.getInstance().state).toEqual(expected);
+  });
+
+  it('triggers handleOnClickDelete', () => {
+    const result = renderer.create(<PanelContent />);
+
+    const mockRowData = {
+      fullName: 'dummy SW name',
+      email: 'dummy_SW_name@starwarsfanboy.com',
+      city: 'dummy SW name\'s city',
+      rideInGroupIndex: 2,
+      daysOfTheWeekIndices: [true, true, true, true, true, true, true],
+      registrationDay: 'dummy format',
+    };
+
+    const mockTargetDeleteData = {
+      fullName: 'target SW name',
+      email: 'target_SW_name@starwarsfanboy.com',
+      city: 'target SW name\'s city',
+      rideInGroupIndex: 1,
+      daysOfTheWeekIndices: [],
+      registrationDay: 'target format',
+    };
+
+    const mockState = {
+      tableData: [
+        mockRowData,
+        mockRowData,
+        mockTargetDeleteData,
+        mockRowData,
+      ],
+    };
+
+    const expected = {
+      tableData: [
+        mockRowData,
+        mockRowData,
+        mockRowData,
+      ],
+    };
+
+    result.getInstance().setState(mockState);
+
+    const mockData = { row: 2 };
+
+    result.getInstance().handleOnClickDelete(mockData);
+
+    expect(result.getInstance().state).toEqual(expected);
+  });
 });

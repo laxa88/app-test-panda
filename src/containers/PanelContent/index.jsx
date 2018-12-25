@@ -40,16 +40,33 @@ class PanelContent extends React.PureComponent {
     tableData: generateTableData(6),
   };
 
-  handleOnClickSave = () => {
-    console.log('save');
+  handleOnClickSave = (data) => {
+    const { tableData } = this.state;
+
+    const newTableData = tableData.slice();
+
+    newTableData.push({
+      fullName: data.fullName,
+      email: data.email,
+      city: data.city,
+      rideInGroupIndex: data.rideInGroupIndex,
+      daysOfTheWeekIndices: data.daysOfTheWeekIndices,
+      registrationDay: data.registrationDay,
+    });
+
+    this.setState({
+      tableData: newTableData,
+    });
   };
 
-  handleOnClickCancel = () => {
-    console.log('cancel');
-  };
+  handleOnClickDelete = (data) => {
+    const { tableData } = this.state;
 
-  handleOnClickDelete = () => {
-    console.log('delete');
+    const newTableData = tableData.filter((item, index) => index !== data.row);
+
+    this.setState({
+      tableData: newTableData,
+    });
   };
 
   render() {
@@ -60,7 +77,6 @@ class PanelContent extends React.PureComponent {
         <ContentHelp isOpen />
 
         <UserRegistration
-          onCancel={this.handleOnClickCancel}
           onSave={this.handleOnClickSave}
         />
 
