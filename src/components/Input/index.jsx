@@ -8,6 +8,11 @@ const StyledInput = styled.input`
   border-color: ${props => props.theme.textColor2};
   border-radius: 5px;
   color: ${props => props.theme.textColor1};
+  height: 38px;
+  width: 100%;
+  padding: 0px 12px;
+  box-sizing: border-box;
+}
 
   :focus {
     border-color: ${props => props.theme.primaryColor1};
