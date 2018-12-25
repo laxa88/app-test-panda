@@ -29,6 +29,25 @@ class RadioGroup extends React.PureComponent {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    const { checkedIndices } = this.state;
+
+    const maxLen = Math.max(nextProps.checkedIndices.length, checkedIndices.length);
+
+    let dirty = false;
+
+    for (let i = 0; i < maxLen; i += 1) {
+      if (nextProps.checkedIndices[i] !== checkedIndices[i]) {
+        dirty = true;
+        break;
+      }
+    }
+
+    if (dirty) {
+      this.setState({ checkedIndices: nextProps.checkedIndices });
+    }
+  }
+
   handleOnChangeCheckbox = index => (newCheckedValue) => {
     const { options, onChange } = this.props;
     const { checkedIndices } = this.state;

@@ -31,6 +31,26 @@ describe('<CheckboxGroup />', () => {
     expect(result.getInstance().state.checkedIndices).toEqual(mockCheckedIndices);
   });
 
+  it('triggers componentWillReceiveProps', () => {
+    const mockIndices = [true, false, true];
+
+    const result = renderer.create(<CheckboxGroup checkedIndices={mockIndices} options={mockOptions} />);
+
+    const mockNextProps = {
+      checkedIndices: [false, true],
+    };
+
+    result.getInstance().componentWillReceiveProps(mockNextProps);
+
+    expect(result.getInstance().state.checkedIndices).toEqual(mockNextProps.checkedIndices);
+
+    // triggering with same value again should do nothing
+
+    result.getInstance().componentWillReceiveProps(mockNextProps);
+
+    expect(result.getInstance().state.checkedIndices).toEqual(mockNextProps.checkedIndices);
+  });
+
   it('triggers onChange', () => {
     const spy = jest.fn();
 
