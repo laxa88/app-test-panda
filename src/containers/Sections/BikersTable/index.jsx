@@ -117,19 +117,19 @@ class BikersTable extends React.Component {
     return result;
   };
 
-  cellDelete = () => (
+  cellDelete = data => (
     <button
       type="button"
       className={css.deleteIcon}
-      onClick={this.handleOnClickDelete}
+      onClick={this.handleOnClickDelete(data)}
     >
       <FontAwesomeIcon icon={['far', 'trash-alt']} />
     </button>
   );
 
-  handleOnClickDelete = item => () => {
+  handleOnClickDelete = data => () => {
     const { onDelete } = this.props;
-    onDelete(item);
+    onDelete(data);
   };
 
   render() {
@@ -139,7 +139,7 @@ class BikersTable extends React.Component {
       <div>
         <h1>Bikers Table</h1>
 
-        <Table headers={this.headers} data={tableData} />
+        <Table className={css.table} headers={this.headers} data={tableData} />
       </div>
     );
   }

@@ -1,15 +1,49 @@
 .registrationCell {
-  background-color: pink;
+  display: flex;
+  align-items: center;
 }
 
 .registrationDate {
-  background-color: green;
+  padding-right: 5px;
 }
 
 .registrationTime {
-  background-color: aqua;
+  color: #999;
+  font-size: 80%;
 }
 
 .deleteIcon {
-  background-color: blue;
+  opacity: 0;
+  font-size: 12px;
+  background-color: rgba(0,0,0,0);
+}
+
+.table tbody tr:hover .deleteIcon {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  padding: 28px 0;
+}
+
+.table thead tr {
+  height: 64px;
+}
+
+.table th,
+.table td {
+  font-weight: normal;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.table th {
+  color: white;
+}
+
+.table tbody tr {
+  height: 48px;
+  cursor: pointer;
 }
