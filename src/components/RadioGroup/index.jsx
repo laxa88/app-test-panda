@@ -20,6 +20,14 @@ class RadioGroup extends React.PureComponent {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    const { checkedIndex } = this.state;
+
+    if (nextProps.checkedIndex !== checkedIndex) {
+      this.setState({ checkedIndex: nextProps.checkedIndex });
+    }
+  }
+
   renderRadioButtons = () => {
     const { disabled, options } = this.props;
     const { checkedIndex } = this.state;

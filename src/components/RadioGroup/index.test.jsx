@@ -11,10 +11,22 @@ describe('<RadioGroup />', () => {
     { value: 301, label: 'dummy option 3' },
   ];
 
-  it('renders', () => {
-    const result = renderer.create(<RadioGroup options={mockOptions} />);
+  it('triggers componentWillReceiveProps', () => {
+    const mockIndex = 101;
 
-    expect(result.toJSON().type).toBe('div');
+    const result = renderer.create(<RadioGroup checkedIndex={mockIndex} options={mockOptions} />);
+
+    const mockNextProps = { checkedIndex: 102 };
+
+    result.getInstance().componentWillReceiveProps(mockNextProps);
+
+    expect(result.getInstance().state.checkedIndex).toBe(mockNextProps.checkedIndex);
+
+    // triggering with same value again should do nothing
+
+    result.getInstance().componentWillReceiveProps(mockNextProps);
+
+    expect(result.getInstance().state.checkedIndex).toBe(mockNextProps.checkedIndex);
   });
 
   it('triggers onChange', () => {
