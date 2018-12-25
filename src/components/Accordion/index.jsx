@@ -10,8 +10,8 @@ export const StyledContainer = styled.div`
   border: 1px solid ${props => props.theme.secondaryColor2};
   width: 100%;
   border-radius: 5px;
-  margin: 20px 0;
   overflow: hidden;
+  box-sizing: border-box;
 `;
 
 export const StyledHeader = styled.button`
