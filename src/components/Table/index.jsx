@@ -85,9 +85,10 @@ class Table extends React.Component {
 
   render() {
     const { theme } = this.context;
+    const { headers, data, ...others } = this.props;
 
     return (
-      <StyledTable theme={theme}>
+      <StyledTable theme={theme} {...others}>
         <thead>
           <tr>{this.renderHeaders()}</tr>
         </thead>
