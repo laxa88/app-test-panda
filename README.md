@@ -24,7 +24,7 @@ For library versions, refer to `package.json`.
 
 ## More Commands
 
-1. To build the app for production, run `npm run build`. The result will be generated into the top-level `/dist` folder.
+1. To build the app for production, run `npm run build`. The result files (including gzipped bundle) will be generated into the top-level `/dist` folder.
 
 2. To test individual components in a sandbox environment, we use Storybook; Run `npm run storybook`. A new browser tab should automatically open at `http://localhost:9001` (default).
 
