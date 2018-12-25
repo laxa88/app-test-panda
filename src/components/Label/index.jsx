@@ -6,15 +6,17 @@ import { ThemeContext } from '../../theme';
 
 export const StyledLabel = styled.div`
   color: ${props => props.theme.textColor1};
+  font-weight: bold;
+  padding: 7px 0;
 `;
 
 class Label extends React.PureComponent {
   render() {
     const { theme } = this.context;
-    const { text, children } = this.props;
+    const { text, children, ...others } = this.props;
 
     return (
-      <div>
+      <div {...others}>
         <StyledLabel theme={theme}>{text}</StyledLabel>
         {children}
       </div>
