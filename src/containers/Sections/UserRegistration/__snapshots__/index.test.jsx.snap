@@ -1,8 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<UserRegistration /> renders 1`] = `
-<div>
-  <h1>
+<div
+  className="container"
+>
+  <h1
+    className="title"
+  >
     User Registration
   </h1>
   <div
@@ -10,50 +14,80 @@ exports[`<UserRegistration /> renders 1`] = `
   >
     <div>
       <div
-        className="sc-bdVaJa kFqtFi"
+        className="sc-bdVaJa kWxWaB"
       >
         Full name
       </div>
       <div>
         <input
-          className="sc-bwzfXH dvuTee"
+          className="sc-bwzfXH eIPCFZ"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           value=""
         />
+        <div
+          className="sc-htpNat fikBex"
+          style={
+            Object {
+              "opacity": 0,
+            }
+          }
+        >
+          Enter your full name here
+        </div>
       </div>
     </div>
     <div>
       <div
-        className="sc-bdVaJa kFqtFi"
+        className="sc-bdVaJa kWxWaB"
       >
         E-mail
       </div>
       <div>
         <input
-          className="sc-bwzfXH dvuTee"
+          className="sc-bwzfXH eIPCFZ"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           value=""
         />
+        <div
+          className="sc-htpNat fikBex"
+          style={
+            Object {
+              "opacity": 0,
+            }
+          }
+        >
+          Enter your email here
+        </div>
       </div>
     </div>
     <div>
       <div
-        className="sc-bdVaJa kFqtFi"
+        className="sc-bdVaJa kWxWaB"
       >
         City
       </div>
       <div>
         <input
-          className="sc-bwzfXH dvuTee"
+          className="sc-bwzfXH eIPCFZ"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           value=""
         />
+        <div
+          className="sc-htpNat fikBex"
+          style={
+            Object {
+              "opacity": 0,
+            }
+          }
+        >
+          Enter your city here
+        </div>
       </div>
     </div>
   </div>
@@ -61,11 +95,11 @@ exports[`<UserRegistration /> renders 1`] = `
     className="rightSection"
   >
     <div
-      className="optionsSection"
+      className="row inputSection"
     >
       <div>
         <div
-          className="sc-bdVaJa kFqtFi"
+          className="sc-bdVaJa kWxWaB"
         >
           Ride in a group?
         </div>
@@ -74,7 +108,7 @@ exports[`<UserRegistration /> renders 1`] = `
         >
           <button
             checked={false}
-            className="sc-bxivhb bIUrUU"
+            className="sc-bxivhb kHcsbF"
             disabled={false}
             onClick={[Function]}
           >
@@ -84,14 +118,14 @@ exports[`<UserRegistration /> renders 1`] = `
               Mocked_FontAwesomeIcon (far,circle)
             </div>
             <div
-              className="sc-EHOje hxBsOR"
+              className="sc-EHOje hgyfiX"
             >
               Always
             </div>
           </button>
           <button
             checked={false}
-            className="sc-bxivhb bIUrUU"
+            className="sc-bxivhb kHcsbF"
             disabled={false}
             onClick={[Function]}
           >
@@ -101,14 +135,14 @@ exports[`<UserRegistration /> renders 1`] = `
               Mocked_FontAwesomeIcon (far,circle)
             </div>
             <div
-              className="sc-EHOje hxBsOR"
+              className="sc-EHOje hgyfiX"
             >
               Sometimes
             </div>
           </button>
           <button
             checked={false}
-            className="sc-bxivhb bIUrUU"
+            className="sc-bxivhb kHcsbF"
             disabled={false}
             onClick={[Function]}
           >
@@ -118,113 +152,151 @@ exports[`<UserRegistration /> renders 1`] = `
               Mocked_FontAwesomeIcon (far,circle)
             </div>
             <div
-              className="sc-EHOje hxBsOR"
+              className="sc-EHOje hgyfiX"
             >
               Never
             </div>
           </button>
         </div>
       </div>
-      <div>
+    </div>
+    <div
+      className="row inputSection"
+    >
+      <div
+        style={
+          Object {
+            "padding": "8px 0",
+          }
+        }
+      >
         <div
-          className="sc-bdVaJa kFqtFi"
+          className="sc-bdVaJa kWxWaB"
         >
-          Ride in a group?
+          Days of the week
         </div>
         <div
           className="sc-dnqmqq iFsitv"
         >
           <div
-            className="sc-iwsKbI exZsDe"
+            className="sc-gZMcBi geaYPW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw cRRUTu"
+              className="sc-gzVnrw hzWFXE"
               disabled={false}
               onClick={[Function]}
             />
-            Sun
+            <div
+              className="sc-iwsKbI exYeGo"
+            >
+              Sun
+            </div>
           </div>
           <div
-            className="sc-iwsKbI exZsDe"
+            className="sc-gZMcBi geaYPW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw cRRUTu"
+              className="sc-gzVnrw hzWFXE"
               disabled={false}
               onClick={[Function]}
             />
-            Mon
+            <div
+              className="sc-iwsKbI exYeGo"
+            >
+              Mon
+            </div>
           </div>
           <div
-            className="sc-iwsKbI exZsDe"
+            className="sc-gZMcBi geaYPW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw cRRUTu"
+              className="sc-gzVnrw hzWFXE"
               disabled={false}
               onClick={[Function]}
             />
-            Tue
+            <div
+              className="sc-iwsKbI exYeGo"
+            >
+              Tue
+            </div>
           </div>
           <div
-            className="sc-iwsKbI exZsDe"
+            className="sc-gZMcBi geaYPW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw cRRUTu"
+              className="sc-gzVnrw hzWFXE"
               disabled={false}
               onClick={[Function]}
             />
-            Wed
+            <div
+              className="sc-iwsKbI exYeGo"
+            >
+              Wed
+            </div>
           </div>
           <div
-            className="sc-iwsKbI exZsDe"
+            className="sc-gZMcBi geaYPW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw cRRUTu"
+              className="sc-gzVnrw hzWFXE"
               disabled={false}
               onClick={[Function]}
             />
-            Thu
+            <div
+              className="sc-iwsKbI exYeGo"
+            >
+              Thu
+            </div>
           </div>
           <div
-            className="sc-iwsKbI exZsDe"
+            className="sc-gZMcBi geaYPW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw cRRUTu"
+              className="sc-gzVnrw hzWFXE"
               disabled={false}
               onClick={[Function]}
             />
-            Fri
+            <div
+              className="sc-iwsKbI exYeGo"
+            >
+              Fri
+            </div>
           </div>
           <div
-            className="sc-iwsKbI exZsDe"
+            className="sc-gZMcBi geaYPW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw cRRUTu"
+              className="sc-gzVnrw hzWFXE"
               disabled={false}
               onClick={[Function]}
             />
-            Sat
+            <div
+              className="sc-iwsKbI exYeGo"
+            >
+              Sat
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      className="buttonsSection"
+      className="row buttonsSection"
     >
       <button
-        className="sc-gqjmRU gbVcEs"
+        className="button sc-VigVT fQFdaF"
         onClick={[Function]}
       >
         Cancel
       </button>
       <button
-        className="sc-gZMcBi iMbkRI"
+        className="button sc-gqjmRU cevCYO"
         onClick={[Function]}
       >
         Save

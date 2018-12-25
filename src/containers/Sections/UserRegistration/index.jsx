@@ -96,8 +96,8 @@ class UserRegistration extends React.Component {
     } = this.state;
 
     return (
-      <div>
-        <h1>User Registration</h1>
+      <div className={css.container}>
+        <h1 className={css.title}>User Registration</h1>
 
         <div className={css.leftSection}>
           <Label text="Full name">
@@ -126,7 +126,7 @@ class UserRegistration extends React.Component {
         </div>
 
         <div className={css.rightSection}>
-          <div className={css.optionsSection}>
+          <div className={`${css.row} ${css.inputSection}`}>
             <Label text="Ride in a group?">
               <RadioGroup
                 checkedIndex={rideInGroupIndex}
@@ -134,8 +134,10 @@ class UserRegistration extends React.Component {
                 onChange={this.handleOnChangeRideInGroup}
               />
             </Label>
+          </div>
 
-            <Label text="Ride in a group?">
+          <div className={`${css.row} ${css.inputSection}`}>
+            <Label style={{ padding: '8px 0' }} text="Days of the week">
               <CheckboxGroup
                 checkedIndices={daysOfTheWeekIndices}
                 options={daysOfTheWeekOptions}
@@ -144,7 +146,7 @@ class UserRegistration extends React.Component {
             </Label>
           </div>
 
-          <div className={css.buttonsSection}>
+          <div className={`${css.row} ${css.buttonsSection}`}>
             <ButtonSecondary onClick={this.handleOnClickCancel}>Cancel</ButtonSecondary>
             <ButtonPrimary onClick={this.handleOnClickSave}>Save</ButtonPrimary>
           </div>

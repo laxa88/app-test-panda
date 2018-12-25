@@ -1,15 +1,43 @@
+.container {
+  padding: 86px 0 46px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.title {
+  width: 100%;
+}
+
 .leftSection {
-  background-color: green;
+  width: 40%;
+  padding: 24px 0;
 }
 
 .rightSection {
-  background-color: green;
+  width: 50%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
-.optionsSection {
-  background-color: aqua;
+.row {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.inputSection {
+  padding: 0 14px;
 }
 
 .buttonsSection {
-  background-color: pink;
+  flex-direction: initial;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.buttonsSection button {
+  margin-left: 10px;
 }
