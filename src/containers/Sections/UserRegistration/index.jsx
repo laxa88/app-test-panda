@@ -1,3 +1,4 @@
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -25,13 +26,17 @@ const daysOfTheWeekOptions = [
   { value: 6, label: 'Sat' },
 ];
 
+const initialState = {
+  fullName: '',
+  email: '',
+  city: '',
+  rideInGroupIndex: null,
+  daysOfTheWeekIndices: [],
+};
+
 class UserRegistration extends React.Component {
   state = {
-    fullName: '',
-    email: '',
-    city: '',
-    rideInGroupIndex: null,
-    daysOfTheWeekIndices: [],
+    ...initialState,
   };
 
   handleOnChangeFullName = (e) => {
@@ -57,6 +62,8 @@ class UserRegistration extends React.Component {
   handleOnClickCancel = () => {
     const { onCancel } = this.props;
 
+    this.setState(initialState);
+
     onCancel();
   };
 
@@ -75,12 +82,9 @@ class UserRegistration extends React.Component {
       fullName,
       email,
       city,
-      rideInGroup: rideInGroupOptions[rideInGroupIndex],
-      daysOfTheWeek: daysOfTheWeekOptions.map((item, index) => ({
-        value: item.value,
-        label: item.label,
-        checked: !!daysOfTheWeekIndices[index],
-      })),
+      rideInGroupIndex,
+      daysOfTheWeekIndices,
+      registrationDay: moment().format(),
     };
 
     onSave(payload);
@@ -94,6 +98,13 @@ class UserRegistration extends React.Component {
       rideInGroupIndex,
       daysOfTheWeekIndices,
     } = this.state;
+
+    const disabled = !(
+      fullName
+      && email
+      && city
+      && typeof rideInGroupIndex === 'number'
+    );
 
     return (
       <div className={css.container}>
@@ -147,8 +158,15 @@ class UserRegistration extends React.Component {
           </div>
 
           <div className={`${css.row} ${css.buttonsSection}`}>
-            <ButtonSecondary onClick={this.handleOnClickCancel}>Cancel</ButtonSecondary>
-            <ButtonPrimary onClick={this.handleOnClickSave}>Save</ButtonPrimary>
+            <ButtonSecondary
+              disabled={disabled}
+              onClick={this.handleOnClickCancel}
+            >
+              Cancel
+            </ButtonSecondary>
+            <ButtonPrimary disabled={disabled} onClick={this.handleOnClickSave}>
+              Save
+            </ButtonPrimary>
           </div>
         </div>
       </div>
@@ -156,8 +174,12 @@ class UserRegistration extends React.Component {
   }
 }
 
+UserRegistration.defaultProps = {
+  onCancel: () => {},
+};
+
 UserRegistration.propTypes = {
-  onCancel: PropTypes.func.isRequired,
+  onCancel: PropTypes.func,
   onSave: PropTypes.func.isRequired,
 };
 

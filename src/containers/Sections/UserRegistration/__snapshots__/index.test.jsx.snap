@@ -291,12 +291,14 @@ exports[`<UserRegistration /> renders 1`] = `
     >
       <button
         className="button sc-VigVT fQFdaF"
+        disabled={true}
         onClick={[Function]}
       >
         Cancel
       </button>
       <button
         className="button sc-gqjmRU cevCYO"
+        disabled={true}
         onClick={[Function]}
       >
         Save

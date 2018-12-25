@@ -3,9 +3,13 @@ import renderer from 'react-test-renderer';
 
 import UserRegistration from './index';
 
+jest.mock('moment', () => () => ({
+  default: jest.fn().mockReturnThis(),
+  format: () => 'dummy format',
+}));
+
 describe('<UserRegistration />', () => {
   const getMockProps = () => ({
-    onCancel: jest.fn(),
     onSave: jest.fn(),
   });
 
@@ -93,7 +97,14 @@ describe('<UserRegistration />', () => {
 
     result.getInstance().handleOnClickCancel();
 
-    expect(mockProps.onCancel).toHaveBeenCalled();
+    mockProps.onCancel = jest.fn();
+    result.update(<UserRegistration {...mockProps} />);
+
+    // result.getInstance().props.onCancel = mockCancel;
+
+    result.getInstance().handleOnClickCancel();
+
+    expect(mockProps.onCancel).toHaveBeenCalledTimes(1);
   });
 
   it('triggers handleOnClickSave', () => {
@@ -105,8 +116,9 @@ describe('<UserRegistration />', () => {
       fullName: 'dummy fullName',
       email: 'dummy email',
       city: 'dummy city',
-      rideInGroupIndex: 1,
+      rideInGroupIndex: 123,
       daysOfTheWeekIndices: [true, false, true],
+      registrationDay: 'dummy format',
     };
 
     result.getInstance().setState(mockState);
@@ -115,16 +127,9 @@ describe('<UserRegistration />', () => {
       fullName: mockState.fullName,
       email: mockState.email,
       city: mockState.city,
-      rideInGroup: { value: 1, label: 'Sometimes' },
-      daysOfTheWeek: [
-        { value: 0, label: 'Sun', checked: true },
-        { value: 1, label: 'Mon', checked: false },
-        { value: 2, label: 'Tue', checked: true },
-        { value: 3, label: 'Wed', checked: false },
-        { value: 4, label: 'Thu', checked: false },
-        { value: 5, label: 'Fri', checked: false },
-        { value: 6, label: 'Sat', checked: false },
-      ],
+      rideInGroupIndex: mockState.rideInGroupIndex,
+      daysOfTheWeekIndices: mockState.daysOfTheWeekIndices,
+      registrationDay: mockState.registrationDay,
     };
 
     result.getInstance().handleOnClickSave();
