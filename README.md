@@ -34,6 +34,10 @@ For library versions, refer to `package.json`.
 
 ## Development Notes
 
+### Themed colours
+
+This project comes included with some naive theme approach using React contexts. To see this in action, go to `src/theme.js` and change the value `currentTheme` to `sakura`, then reload the page.
+
 ### Using Storybook to develop components
 
 When writing components, it is impractical to use an existing page within the app as placeholder for work-in-progress. Storybook helps provide a sandboxed and organised environment for such a situation.
