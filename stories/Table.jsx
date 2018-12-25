@@ -127,7 +127,7 @@ const headersWithCustomRenderers = [
     width: 150, accessor: 'registrationDay', header: headerRenderer('Registration day'), cell: timeRenderer,
   },
   {
-    width: 100, accessor: 'id', header: '', cell: optionRenderer,
+    width: 100, accessor: '', header: '', cell: optionRenderer,
   },
 ];
 
