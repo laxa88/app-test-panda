@@ -5,6 +5,10 @@ import Accordion from '../Accordion';
 
 import { currentTheme } from '../../theme';
 
+export const StyledContainer = styled.div`
+  padding: 20px 0;
+`;
+
 export const StyledBody = styled.div`
   padding: 20px;
 
@@ -12,7 +16,6 @@ export const StyledBody = styled.div`
     color: ${props => props.theme.secondaryColor2};
     font-size: 110px;
     float: left;
-    padding: 0 20px 20px 0;
   }
 
   & p {
@@ -20,7 +23,7 @@ export const StyledBody = styled.div`
   }
 `;
 
-const Body = (
+export const Body = (
   <StyledBody theme={currentTheme}>
     <FontAwesomeIcon icon={['far', 'life-ring']} />
 
@@ -42,11 +45,18 @@ const Body = (
     <p>
       Donec porttitor nisi vitae quam dapibus, vel posuere purus mollis. Integer
       ut rhoncus odio. Nulla sit amet facilisis dolor, sit amet sagittis ante.
-      Nam non felis in ipsum lacinia blandit.
+      Nam non felis in ipsum lacinia blandit. Nulla sit amet facilisis dolor,
+      sit amet sagittis ante. Nam non felis in ipsum lacinia blandit. Curabitur
+      rhoncus, elit sed faucibus malesuada, arcu nisi sollicitudin eros, in
+      porttitor lorem risus nec nunc.
     </p>
   </StyledBody>
 );
 
-const ContentHelp = props => <Accordion header="Help" body={Body} {...props} />;
+const ContentHelp = props => (
+  <StyledContainer>
+    <Accordion header="Help" body={Body} {...props} />
+  </StyledContainer>
+);
 
 export default ContentHelp;

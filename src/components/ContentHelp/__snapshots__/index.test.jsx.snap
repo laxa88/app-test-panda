@@ -1,23 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ContentHelp /> renders 1`] = `
-Array [
-  <FontAwesomeIcon
-    icon={
-      Array [
-        "far",
-        "life-ring",
-      ]
-    }
-  />,
+exports[`<ContentHelp /> renders Body 1`] = `
+.c0 {
+  padding: 20px;
+}
+
+.c0 svg {
+  color: #999999;
+  font-size: 110px;
+  float: left;
+}
+
+.c0 p {
+  font-size: 14px;
+}
+
+<div
+  className="c0"
+>
+  Mocked_FontAwesomeIcon (far,life-ring)
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec faucibus lacus, ut aliquet est. Sed et elit ex. Vestibulum nisl nisi, aliquam id justo sit amet, varius consequat diam. Vivamus at dui ornare enim ultricies sollicitudin ut non orci. Integer sagittis sapien et nisl maximus varius. In vitae maximus nulla, a tempus eros.
-  </p>,
+  </p>
   <p>
     Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ac magna vehicula enim vestibulum finibus sed ut sem. In hac habitasse platea dictumst. Donec porttitor nisi vitae quam dapibus, vel posuere purus mollis. Integer ut rhoncus odio.
-  </p>,
+  </p>
   <p>
-    Donec porttitor nisi vitae quam dapibus, vel posuere purus mollis. Integer ut rhoncus odio. Nulla sit amet facilisis dolor, sit amet sagittis ante. Nam non felis in ipsum lacinia blandit.
-  </p>,
-]
+    Donec porttitor nisi vitae quam dapibus, vel posuere purus mollis. Integer ut rhoncus odio. Nulla sit amet facilisis dolor, sit amet sagittis ante. Nam non felis in ipsum lacinia blandit. Nulla sit amet facilisis dolor, sit amet sagittis ante. Nam non felis in ipsum lacinia blandit. Curabitur rhoncus, elit sed faucibus malesuada, arcu nisi sollicitudin eros, in porttitor lorem risus nec nunc.
+  </p>
+</div>
 `;
