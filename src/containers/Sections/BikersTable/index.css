@@ -1,0 +1,15 @@
+.registrationCell {
+  background-color: pink;
+}
+
+.registrationDate {
+  background-color: green;
+}
+
+.registrationTime {
+  background-color: aqua;
+}
+
+.deleteIcon {
+  background-color: blue;
+}

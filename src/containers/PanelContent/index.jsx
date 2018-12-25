@@ -1,3 +1,5 @@
+import moment from 'moment';
+import names from 'starwars-names';
 import React from 'react';
 
 import ContentHelp from '../../components/ContentHelp';
@@ -6,30 +8,62 @@ import BikersTable from '../Sections/BikersTable';
 
 import css from './index.css';
 
+export const generateTableData = (count) => {
+  const items = [];
+
+  for (let i = 0; i < count; i += 1) {
+    const name = names.random();
+
+    const rideInGroupIndex = Math.floor((Math.random() * 10) % 3);
+
+    const daysOfTheWeekIndices = [0, 0, 0, 0, 0, 0, 0].map(() => Math.random() > 0.5);
+
+    items.push({
+      fullName: name,
+      email: `${name.replace(/\s/g, '_')}@starwarsfanboy.com`,
+      city: `${name}'s city`,
+      rideInGroupIndex,
+      daysOfTheWeekIndices,
+      registrationDay: moment().format(),
+    });
+  }
+
+  return items;
+};
+
 class PanelContent extends React.PureComponent {
+  state = {
+    tableData: generateTableData(5),
+  };
+
   handleOnClickSave = () => {
-    // todo
+    console.log('save');
   };
 
   handleOnClickCancel = () => {
-    // todo
+    console.log('cancel');
   };
 
   handleOnClickDelete = () => {
-    // todo
+    console.log('delete');
   };
 
   render() {
+    const { tableData } = this.state;
+
     return (
       <div className={css.body}>
-        <ContentHelp />
+        <ContentHelp isOpen />
 
         <UserRegistration
           onCancel={this.handleOnClickCancel}
           onSave={this.handleOnClickSave}
         />
 
-        <BikersTable />
+        <BikersTable
+          onDelete={this.handleOnClickDelete}
+          tableData={tableData}
+        />
       </div>
     );
   }
