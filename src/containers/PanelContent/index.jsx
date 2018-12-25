@@ -18,13 +18,17 @@ export const generateTableData = (count) => {
 
     const daysOfTheWeekIndices = [0, 0, 0, 0, 0, 0, 0].map(() => Math.random() > 0.5);
 
+    const startDate = new Date(2016, 1, 1).getTime();
+    const endDate = new Date().getTime();
+    const registrationDay = new Date(startDate + Math.random() * (endDate - startDate));
+
     items.push({
       fullName: name,
       email: `${name.replace(/\s/g, '_')}@starwarsfanboy.com`,
       city: `${name}'s city`,
       rideInGroupIndex,
       daysOfTheWeekIndices,
-      registrationDay: moment().format(),
+      registrationDay: moment(registrationDay).format(),
     });
   }
 
@@ -33,7 +37,7 @@ export const generateTableData = (count) => {
 
 class PanelContent extends React.PureComponent {
   state = {
-    tableData: generateTableData(5),
+    tableData: generateTableData(6),
   };
 
   handleOnClickSave = () => {
