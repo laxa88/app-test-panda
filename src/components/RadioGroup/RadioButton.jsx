@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { ThemeContext } from '../../theme';
 
 const StyledRadioButton = styled.button`
+  background-color: rgba(0,0,0,0); /* Override default white */
   align-items: center;
   border: 0;
   display: flex;
@@ -29,7 +30,7 @@ const StyledIcon = styled.div`
 const StyledLabel = styled.div`
   color: ${props => props.theme.textColor1};
   ${props => (props.labelSize ? `font-size: ${props.labelSize}px;` : '')}
-  padding-left: 10px;
+  padding: 0 30px 0 10px;
 `;
 
 class RadioButton extends React.PureComponent {
