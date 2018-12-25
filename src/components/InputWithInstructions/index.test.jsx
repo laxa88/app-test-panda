@@ -16,16 +16,17 @@ describe('<InputWithInstructions />', () => {
 
     const result = renderer.create(<InputWithInstructions instructions={mockInstructions} />);
 
+    // Default instruction is invisible
     expect(result.root.instance.state.isFocused).toBe(false);
-    expect(result.root.children[0].children[1]).toBe(undefined);
+    expect(result.root.children[0].children[1].children[0].props.style).toEqual({ opacity: 0 });
 
+    // Instruction is visible on focus
     result.toJSON().children[0].props.onFocus();
-
     expect(result.root.instance.state.isFocused).toBe(true);
-    expect(result.root.children[0].children[1].props.children).toBe(mockInstructions);
+    expect(result.root.children[0].children[1].children[0].props.style).toBeUndefined();
 
+    // Check isFocused is reset correctly
     result.toJSON().children[0].props.onBlur();
-
     expect(result.root.instance.state.isFocused).toBe(false);
   });
 });

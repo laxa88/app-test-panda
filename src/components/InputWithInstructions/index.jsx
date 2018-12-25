@@ -6,7 +6,8 @@ import Input from '../Input';
 
 const StyledInstruction = styled.div`
   color: ${props => props.theme.textColor2};
-  font-size: 75%;
+  font-size: 12px;
+  padding: 7px 0;
 `;
 
 class InputWithInstructions extends React.PureComponent {
@@ -31,11 +32,7 @@ class InputWithInstructions extends React.PureComponent {
     const { isFocused } = this.state;
     const { instructions, ...others } = this.props;
 
-    const instructionSection = isFocused ? (
-      <StyledInstruction theme={theme}>{instructions}</StyledInstruction>
-    ) : (
-      undefined
-    );
+    const instructionStyle = isFocused ? undefined : { opacity: 0 };
 
     return (
       <div>
@@ -44,7 +41,7 @@ class InputWithInstructions extends React.PureComponent {
           onFocus={this.handleOnFocus}
           {...others}
         />
-        {instructionSection}
+        <StyledInstruction theme={theme} style={instructionStyle}>{instructions}</StyledInstruction>
       </div>
     );
   }
