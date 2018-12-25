@@ -9,8 +9,8 @@ const StyledBox = styled.button`
   border: 2px solid;
   border-color: ${props => (props.checked ? props.theme.primaryColor1 : props.theme.textColor2)};
   border-radius: 5px;
-  height: 50px;
-  width: 50px;
+  height: 28px;
+  width: 28px;
 
   :hover {
     border-color: ${props => props.theme.primaryColor1};
@@ -24,8 +24,8 @@ const StyledBox = styled.button`
   }
 
   & svg {
-    width: 80% !important; /* Override default SVG width */
-    height: 80%;
+    width: 55% !important; /* Override default SVG width */
+    height: 60%;
   }
 `;
 
@@ -56,7 +56,7 @@ class Checkbox extends React.PureComponent {
     const { checked } = this.state;
     const { disabled } = this.props;
 
-    const content = checked ? (
+    const check = checked ? (
       <StyledCheck>
         <FontAwesomeIcon color={theme.textColor1} icon={['fas', 'check']} />
       </StyledCheck>
@@ -71,7 +71,7 @@ class Checkbox extends React.PureComponent {
         disabled={disabled}
         onClick={this.handleOnChange}
       >
-        {content}
+        {check}
       </StyledBox>
     );
   }

@@ -9,6 +9,10 @@ const StyledGroup = styled.div`
   display: flex;
 `;
 
+const StyledContent = styled.div`
+  padding: 0 15px;
+`;
+
 const StyledCheckboxContainer = styled.div`
     display: flex;
     align-items: center;
@@ -53,7 +57,7 @@ class RadioGroup extends React.PureComponent {
           checked={checkedIndices[index]}
           onChange={this.handleOnChangeCheckbox(index)}
         />
-        {opt.label}
+        <StyledContent>{opt.label}</StyledContent>
       </StyledCheckboxContainer>
     ));
 
