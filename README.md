@@ -16,6 +16,22 @@ The following tools were used during development:
 
 For library versions, refer to `package.json`.
 
+## Requirements checklist
+
+- [X] The helpbox must appear closed by default, and should open as an accordion if the user clicks on it.
+
+- [X] Both the form and the list should be visible at all times.
+
+- [X] When a form field is focused, instructions should appear below it. Any text is fine, you can go with “Lorem ipsu...”.
+
+- [X] The list should be pre-populated with data. The data may or may not be the same one that is displayed on the PDF. Just a couple of rows are fine.
+
+- [X] The “trash” icon should only appear when the user is hovering over the row. Clicking on it should remove the row.
+
+- [X] Submitting the form should add a new row to the list.
+
+- [X] It is not required to persist the data in the list.
+
 ## Getting Started
 
 1. In this folder, run `npm i` to install all dependencies
