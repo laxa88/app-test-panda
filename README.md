@@ -20,7 +20,17 @@ For library versions, refer to `package.json`.
 
 1. In this folder, run `npm i` to install all dependencies
 
-2. To start the app in development mode, run `npm run start`
+2. To start the app in development mode, run `npm run start`. You can then access the page on `http://localhost:8080` (default).
+
+## More Commands
+
+1. To build the app for production, run `npm run build`. The result will be generated into the top-level `/dist` folder.
+
+2. To test individual components in a sandbox environment, we use Storybook; Run `npm run storybook`. A new browser tab should automatically open at `http://localhost:9001` (default).
+
+3. To run unit tests for the project, run `npm run test`.
+
+4. To run ESlint (for common code, syntax or style violations), run `npm run lint`.
 
 ## Development Notes
 
