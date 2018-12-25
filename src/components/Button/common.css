@@ -1,0 +1,17 @@
+.button {
+  border-radius: 5px;
+  width: 88px;
+  height: 36px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.5;
+}
+
+.button:disabled:hover {
+  cursor: default;
+}

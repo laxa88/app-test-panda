@@ -2,7 +2,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import ButtonSecondary from '../src/components/ButtonSecondary';
+import ButtonSecondary from '../src/components/Button/ButtonSecondary';
 import { sakura, ThemeContext } from '../src/theme';
 
 const callback = () => {

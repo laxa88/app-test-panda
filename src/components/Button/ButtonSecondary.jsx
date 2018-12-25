@@ -3,21 +3,17 @@ import styled from 'styled-components';
 
 import { ThemeContext } from '../../theme';
 
+import css from './common.css';
+
 const StyledButton = styled.button`
-  color: black;
+  color: ${props => props.theme.textColor1};
   background-color: ${props => props.theme.secondaryColor1};
 
   :hover {
-    cursor: pointer;
     background-color: ${props => props.theme.secondaryColor2};
   }
 
-  :disabled {
-    opacity: 0.5;
-  }
-
   :disabled:hover {
-    cursor: default;
     background-color: ${props => props.theme.secondaryColor1};
   }
 `;
@@ -25,7 +21,7 @@ const StyledButton = styled.button`
 class ButtonSecondary extends React.PureComponent {
   render() {
     const { theme } = this.context;
-    return <StyledButton {...this.props} theme={theme} />;
+    return <StyledButton className={css.button} {...this.props} theme={theme} />;
   }
 }
 

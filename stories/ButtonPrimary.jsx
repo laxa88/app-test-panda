@@ -2,29 +2,31 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Button from '../src/components/Button';
+import ButtonPrimary from '../src/components/Button/ButtonPrimary';
 import { sakura, ThemeContext } from '../src/theme';
 
 const callback = () => {
   window.alert('Clicked!');
 };
 
-storiesOf('Button', module)
-  .add('default', () => <Button onClick={callback}>Click Me</Button>)
+storiesOf('ButtonPrimary', module)
+  .add('default', () => (
+    <ButtonPrimary onClick={callback}>Click Me</ButtonPrimary>
+  ))
   .add('default disabled', () => (
-    <Button onClick={callback} disabled>
+    <ButtonPrimary onClick={callback} disabled>
       Click Me
-    </Button>
+    </ButtonPrimary>
   ))
   .add('sakura', () => (
     <ThemeContext.Provider value={{ theme: sakura }}>
-      <Button onClick={callback}>Click Me</Button>
+      <ButtonPrimary onClick={callback}>Click Me</ButtonPrimary>
     </ThemeContext.Provider>
   ))
   .add('sakura disabled', () => (
     <ThemeContext.Provider value={{ theme: sakura }}>
-      <Button onClick={callback} disabled>
+      <ButtonPrimary onClick={callback} disabled>
         Click Me
-      </Button>
+      </ButtonPrimary>
     </ThemeContext.Provider>
   ));

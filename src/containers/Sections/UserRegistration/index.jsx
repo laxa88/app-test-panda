@@ -5,8 +5,8 @@ import Label from '../../../components/Label';
 import InputWithInstructions from '../../../components/InputWithInstructions';
 import RadioGroup from '../../../components/RadioGroup';
 import CheckboxGroup from '../../../components/CheckboxGroup';
-import Button from '../../../components/Button';
-import ButtonSecondary from '../../../components/ButtonSecondary';
+import ButtonPrimary from '../../../components/Button/ButtonPrimary';
+import ButtonSecondary from '../../../components/Button/ButtonSecondary';
 import css from './index.css';
 
 const rideInGroupOptions = [
@@ -146,7 +146,7 @@ class UserRegistration extends React.Component {
 
           <div className={css.buttonsSection}>
             <ButtonSecondary onClick={this.handleOnClickCancel}>Cancel</ButtonSecondary>
-            <Button onClick={this.handleOnClickSave}>Save</Button>
+            <ButtonPrimary onClick={this.handleOnClickSave}>Save</ButtonPrimary>
           </div>
         </div>
       </div>

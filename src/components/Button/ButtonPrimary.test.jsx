@@ -2,12 +2,12 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import Button from './index';
+import ButtonPrimary from './ButtonPrimary';
 import { currentTheme } from '../../theme';
 
-describe('<Button />', () => {
+describe('<ButtonPrimary />', () => {
   it('renders', () => {
-    const result = renderer.create(<Button />);
+    const result = renderer.create(<ButtonPrimary />);
 
     expect(result.toJSON().type).toBe('button');
 

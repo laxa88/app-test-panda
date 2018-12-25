@@ -6,7 +6,7 @@ import "../src/index.css";
 
 function loadStories() {
   require("../stories/Accordion.jsx");
-  require("../stories/Button.jsx");
+  require("../stories/ButtonPrimary.jsx");
   require("../stories/ButtonSecondary.jsx");
   require("../stories/Checkbox.jsx");
   require("../stories/CheckboxGroup.jsx");
