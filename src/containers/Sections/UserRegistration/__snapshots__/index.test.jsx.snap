@@ -176,10 +176,10 @@ exports[`<UserRegistration /> renders 1`] = `
           Days of the week
         </div>
         <div
-          className="sc-dnqmqq iFsitv"
+          className="sc-dnqmqq gbpTgz"
         >
           <div
-            className="sc-gZMcBi geaYPW"
+            className="sc-gZMcBi hdBnmH"
           >
             <button
               checked={false}
@@ -194,7 +194,7 @@ exports[`<UserRegistration /> renders 1`] = `
             </div>
           </div>
           <div
-            className="sc-gZMcBi geaYPW"
+            className="sc-gZMcBi hdBnmH"
           >
             <button
               checked={false}
@@ -209,7 +209,7 @@ exports[`<UserRegistration /> renders 1`] = `
             </div>
           </div>
           <div
-            className="sc-gZMcBi geaYPW"
+            className="sc-gZMcBi hdBnmH"
           >
             <button
               checked={false}
@@ -224,7 +224,7 @@ exports[`<UserRegistration /> renders 1`] = `
             </div>
           </div>
           <div
-            className="sc-gZMcBi geaYPW"
+            className="sc-gZMcBi hdBnmH"
           >
             <button
               checked={false}
@@ -239,7 +239,7 @@ exports[`<UserRegistration /> renders 1`] = `
             </div>
           </div>
           <div
-            className="sc-gZMcBi geaYPW"
+            className="sc-gZMcBi hdBnmH"
           >
             <button
               checked={false}
@@ -254,7 +254,7 @@ exports[`<UserRegistration /> renders 1`] = `
             </div>
           </div>
           <div
-            className="sc-gZMcBi geaYPW"
+            className="sc-gZMcBi hdBnmH"
           >
             <button
               checked={false}
@@ -269,7 +269,7 @@ exports[`<UserRegistration /> renders 1`] = `
             </div>
           </div>
           <div
-            className="sc-gZMcBi geaYPW"
+            className="sc-gZMcBi hdBnmH"
           >
             <button
               checked={false}

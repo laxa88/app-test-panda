@@ -7,6 +7,7 @@ import Checkbox from '../Checkbox';
 
 const StyledGroup = styled.div`
   display: flex;
+  flex-flow: wrap;
 `;
 
 const StyledContent = styled.div`
@@ -14,8 +15,9 @@ const StyledContent = styled.div`
 `;
 
 const StyledCheckboxContainer = styled.div`
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
 `;
 
 class RadioGroup extends React.PureComponent {
