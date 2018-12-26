@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const paths = {
   src: path.resolve(__dirname),
-  dist: path.resolve(__dirname, 'dist'),
+  dist: path.resolve(__dirname, 'docs'),
 };
 
 // Injects and links generated files into target template HTML
