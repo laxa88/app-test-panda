@@ -7,6 +7,7 @@ import RadioButton from './RadioButton';
 
 const StyledGroup = styled.div`
   display: flex;
+  flex-flow: wrap;
 `;
 
 class RadioGroup extends React.PureComponent {

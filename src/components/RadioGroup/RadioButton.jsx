@@ -9,6 +9,7 @@ const StyledRadioButton = styled.button`
   align-items: center;
   border: 0;
   display: flex;
+  padding: 5px 0;
 
   :hover {
     cursor: pointer;
