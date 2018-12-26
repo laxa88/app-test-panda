@@ -74,7 +74,7 @@ class PanelContent extends React.PureComponent {
 
     return (
       <div className={css.body}>
-        <ContentHelp isOpen />
+        <ContentHelp />
 
         <UserRegistration
           onSave={this.handleOnClickSave}
