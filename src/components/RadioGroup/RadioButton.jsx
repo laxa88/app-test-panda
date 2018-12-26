@@ -74,7 +74,7 @@ class RadioButton extends React.PureComponent {
         onClick={this.handleOnClick}
       >
         <StyledCircle theme={theme} checked={checked} radioSize={radioSize}>
-          <StyledDot theme={theme} checked={checked} />
+          <StyledDot theme={theme} checked={checked} radioSize={radioSize} />
         </StyledCircle>
 
         <StyledLabel theme={theme} labelSize={labelSize}>
