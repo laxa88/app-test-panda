@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -6,14 +5,13 @@ import styled from 'styled-components';
 import { ThemeContext } from '../../theme';
 
 const StyledRadioButton = styled.button`
-  background-color: rgba(0,0,0,0); /* Override default white */
+  background-color: rgba(0, 0, 0, 0); /* Override default white */
   align-items: center;
   border: 0;
   display: flex;
 
   :hover {
     cursor: pointer;
-    ${props => (props.checked ? '' : 'opacity: 0.5')};
   }
 
   :disabled {
@@ -22,12 +20,32 @@ const StyledRadioButton = styled.button`
   }
 `;
 
-const StyledIcon = styled.div`
-  color: ${props => props.theme.primaryColor1};
-  ${props => (props.radioSize ? `font-size: ${props.radioSize}px;` : '')}
+export const StyledCircle = styled.div`
+  width: ${props => (props.radioSize ? props.radioSize : 25)}px;
+  height: ${props => (props.radioSize ? props.radioSize : 25)}px;
+
+  border: 2px solid;
+  border-color: ${props => (props.checked ? props.theme.primaryColor1 : props.theme.textColor2)};
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  :hover {
+    border-color: ${props => props.theme.primaryColor1};
+  }
 `;
 
-const StyledLabel = styled.div`
+export const StyledDot = styled.div`
+  ${props => (props.checked ? '' : 'opacity: 0;')}
+  background-color: ${props => props.theme.textColor1};
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+`;
+
+export const StyledLabel = styled.div`
   color: ${props => props.theme.textColor1};
   ${props => (props.labelSize ? `font-size: ${props.labelSize}px;` : '')}
   padding: 0 30px 0 10px;
@@ -48,16 +66,19 @@ class RadioButton extends React.PureComponent {
     } = this.props;
     const { theme } = this.context;
 
-    const icon = checked ? ['far', 'dot-circle'] : ['far', 'circle'];
-
     return (
       <StyledRadioButton
         checked={checked}
         disabled={disabled}
         onClick={this.handleOnClick}
       >
-        <StyledIcon theme={theme} radioSize={radioSize}><FontAwesomeIcon icon={icon} /></StyledIcon>
-        <StyledLabel theme={theme} labelSize={labelSize}>{label}</StyledLabel>
+        <StyledCircle theme={theme} checked={checked} radioSize={radioSize}>
+          <StyledDot theme={theme} checked={checked} />
+        </StyledCircle>
+
+        <StyledLabel theme={theme} labelSize={labelSize}>
+          {label}
+        </StyledLabel>
       </StyledRadioButton>
     );
   }

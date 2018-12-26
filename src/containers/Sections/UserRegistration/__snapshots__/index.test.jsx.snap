@@ -104,55 +104,67 @@ exports[`<UserRegistration /> renders 1`] = `
           Ride in a group?
         </div>
         <div
-          className="sc-bZQynM kzlsZH"
+          className="sc-gzVnrw tDqEr"
         >
           <button
             checked={false}
-            className="sc-bxivhb kHcsbF"
+            className="sc-bxivhb eLUuV"
             disabled={false}
             onClick={[Function]}
           >
             <div
-              className="sc-ifAKCX iJBtyr"
+              checked={false}
+              className="sc-ifAKCX eUabxL"
             >
-              Mocked_FontAwesomeIcon (far,circle)
+              <div
+                checked={false}
+                className="sc-EHOje cgaWYt"
+              />
             </div>
             <div
-              className="sc-EHOje hgyfiX"
+              className="sc-bZQynM jHMOIg"
             >
               Always
             </div>
           </button>
           <button
             checked={false}
-            className="sc-bxivhb kHcsbF"
+            className="sc-bxivhb eLUuV"
             disabled={false}
             onClick={[Function]}
           >
             <div
-              className="sc-ifAKCX iJBtyr"
+              checked={false}
+              className="sc-ifAKCX eUabxL"
             >
-              Mocked_FontAwesomeIcon (far,circle)
+              <div
+                checked={false}
+                className="sc-EHOje cgaWYt"
+              />
             </div>
             <div
-              className="sc-EHOje hgyfiX"
+              className="sc-bZQynM jHMOIg"
             >
               Sometimes
             </div>
           </button>
           <button
             checked={false}
-            className="sc-bxivhb kHcsbF"
+            className="sc-bxivhb eLUuV"
             disabled={false}
             onClick={[Function]}
           >
             <div
-              className="sc-ifAKCX iJBtyr"
+              checked={false}
+              className="sc-ifAKCX eUabxL"
             >
-              Mocked_FontAwesomeIcon (far,circle)
+              <div
+                checked={false}
+                className="sc-EHOje cgaWYt"
+              />
             </div>
             <div
-              className="sc-EHOje hgyfiX"
+              className="sc-bZQynM jHMOIg"
             >
               Never
             </div>
@@ -176,109 +188,109 @@ exports[`<UserRegistration /> renders 1`] = `
           Days of the week
         </div>
         <div
-          className="sc-dnqmqq gbpTgz"
+          className="sc-iwsKbI iNklh"
         >
           <div
-            className="sc-gZMcBi hdBnmH"
+            className="sc-gqjmRU liHAQW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw hzWFXE"
+              className="sc-htoDjs clIbxB"
               disabled={false}
               onClick={[Function]}
             />
             <div
-              className="sc-iwsKbI exYeGo"
+              className="sc-gZMcBi yKZqO"
             >
               Mon
             </div>
           </div>
           <div
-            className="sc-gZMcBi hdBnmH"
+            className="sc-gqjmRU liHAQW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw hzWFXE"
+              className="sc-htoDjs clIbxB"
               disabled={false}
               onClick={[Function]}
             />
             <div
-              className="sc-iwsKbI exYeGo"
+              className="sc-gZMcBi yKZqO"
             >
               Tue
             </div>
           </div>
           <div
-            className="sc-gZMcBi hdBnmH"
+            className="sc-gqjmRU liHAQW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw hzWFXE"
+              className="sc-htoDjs clIbxB"
               disabled={false}
               onClick={[Function]}
             />
             <div
-              className="sc-iwsKbI exYeGo"
+              className="sc-gZMcBi yKZqO"
             >
               Wed
             </div>
           </div>
           <div
-            className="sc-gZMcBi hdBnmH"
+            className="sc-gqjmRU liHAQW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw hzWFXE"
+              className="sc-htoDjs clIbxB"
               disabled={false}
               onClick={[Function]}
             />
             <div
-              className="sc-iwsKbI exYeGo"
+              className="sc-gZMcBi yKZqO"
             >
               Thu
             </div>
           </div>
           <div
-            className="sc-gZMcBi hdBnmH"
+            className="sc-gqjmRU liHAQW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw hzWFXE"
+              className="sc-htoDjs clIbxB"
               disabled={false}
               onClick={[Function]}
             />
             <div
-              className="sc-iwsKbI exYeGo"
+              className="sc-gZMcBi yKZqO"
             >
               Fri
             </div>
           </div>
           <div
-            className="sc-gZMcBi hdBnmH"
+            className="sc-gqjmRU liHAQW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw hzWFXE"
+              className="sc-htoDjs clIbxB"
               disabled={false}
               onClick={[Function]}
             />
             <div
-              className="sc-iwsKbI exYeGo"
+              className="sc-gZMcBi yKZqO"
             >
               Sat
             </div>
           </div>
           <div
-            className="sc-gZMcBi hdBnmH"
+            className="sc-gqjmRU liHAQW"
           >
             <button
               checked={false}
-              className="sc-gzVnrw hzWFXE"
+              className="sc-htoDjs clIbxB"
               disabled={false}
               onClick={[Function]}
             />
             <div
-              className="sc-iwsKbI exYeGo"
+              className="sc-gZMcBi yKZqO"
             >
               Sun
             </div>
@@ -290,14 +302,14 @@ exports[`<UserRegistration /> renders 1`] = `
       className="row buttonsSection"
     >
       <button
-        className="button sc-VigVT fQFdaF"
+        className="button sc-jTzLTM jlDhZY"
         disabled={true}
         onClick={[Function]}
       >
         Cancel
       </button>
       <button
-        className="button sc-gqjmRU cevCYO"
+        className="button sc-VigVT jUXDZe"
         disabled={true}
         onClick={[Function]}
       >

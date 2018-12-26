@@ -2,7 +2,11 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import RadioButton from './RadioButton';
+import RadioButton, {
+  StyledCircle,
+  StyledDot,
+  StyledLabel,
+} from './RadioButton';
 import { currentTheme } from '../../theme';
 
 describe('<RadioButton />', () => {
@@ -16,49 +20,47 @@ describe('<RadioButton />', () => {
     const result = renderer.create(<RadioButton {...mockProps} />);
 
     expect(result.toJSON().type).toBe('button');
+  });
+
+  it('StyledCircle renders', () => {
+    const result = renderer.create(<StyledCircle theme={currentTheme} />);
+
+    expect(result.toJSON()).toHaveStyleRule('width', '25px');
+    expect(result.toJSON()).toHaveStyleRule('height', '25px');
+    expect(result.toJSON()).toHaveStyleRule('border-color', currentTheme.textColor2);
 
     expect(result.toJSON()).toHaveStyleRule(
-      'opacity',
-      '0.5',
+      'border-color',
+      currentTheme.primaryColor1,
       { modifier: ':hover' },
     );
 
-    const icon = result.root.findAllByType('div')[0];
-    expect(icon.props.children.props.icon).toEqual(['far', 'circle']);
+    result.update(<StyledCircle theme={currentTheme} radioSize={123} checked />);
+
+    expect(result.toJSON()).toHaveStyleRule('width', '123px');
+    expect(result.toJSON()).toHaveStyleRule('height', '123px');
+    expect(result.toJSON()).toHaveStyleRule('border-color', currentTheme.primaryColor1);
   });
 
-  it('renders checked', () => {
-    const result = renderer.create(<RadioButton {...mockProps} checked />);
+  it('StyledDot renders', () => {
+    const result = renderer.create(<StyledDot theme={currentTheme} />);
 
-    expect(result.toJSON()).toHaveStyleRule(
-      'opacity',
-      undefined,
-      { modifier: ':hover' },
-    );
+    expect(result.toJSON()).toHaveStyleRule('opacity', '0');
 
-    const icon = result.root.findAllByType('div')[0];
-    expect(icon.props.children.props.icon).toEqual(['far', 'dot-circle']);
+    result.update(<StyledDot theme={currentTheme} checked />);
+
+    expect(result.toJSON()).toHaveStyleRule('opacity', undefined);
   });
 
-  it('renders with custom radio and label sizes', () => {
-    const mockRadioSize = 201;
-    const mockLabelSize = 301;
+  it('StyledLabel renders', () => {
+    const result = renderer.create(<StyledLabel theme={currentTheme} />);
 
-    const result = renderer.create(
-      <RadioButton
-        {...mockProps}
-        radioSize={mockRadioSize}
-        labelSize={mockLabelSize}
-      />,
-    );
+    expect(result.toJSON()).toHaveStyleRule('color', currentTheme.textColor1);
+    expect(result.toJSON()).toHaveStyleRule('font-size', undefined);
 
-    const icon = result.toJSON().children[0];
-    expect(icon).toHaveStyleRule('color', currentTheme.primaryColor1);
-    expect(icon).toHaveStyleRule('font-size', `${mockRadioSize}px`);
+    result.update(<StyledLabel theme={currentTheme} labelSize={123} />);
 
-    const label = result.toJSON().children[1];
-    expect(label).toHaveStyleRule('color', currentTheme.textColor1);
-    expect(label).toHaveStyleRule('font-size', `${mockLabelSize}px`);
+    expect(result.toJSON()).toHaveStyleRule('font-size', '123px');
   });
 
   it('triggers onClick', () => {
