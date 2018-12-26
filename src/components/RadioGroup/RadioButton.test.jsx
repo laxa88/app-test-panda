@@ -46,10 +46,14 @@ describe('<RadioButton />', () => {
     const result = renderer.create(<StyledDot theme={currentTheme} />);
 
     expect(result.toJSON()).toHaveStyleRule('opacity', '0');
+    expect(result.toJSON()).toHaveStyleRule('width', '12.5px');
+    expect(result.toJSON()).toHaveStyleRule('height', '12.5px');
 
-    result.update(<StyledDot theme={currentTheme} checked />);
+    result.update(<StyledDot theme={currentTheme} checked radioSize={100} />);
 
     expect(result.toJSON()).toHaveStyleRule('opacity', undefined);
+    expect(result.toJSON()).toHaveStyleRule('width', '50px');
+    expect(result.toJSON()).toHaveStyleRule('height', '50px');
   });
 
   it('StyledLabel renders', () => {

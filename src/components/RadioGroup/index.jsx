@@ -43,7 +43,7 @@ class RadioGroup extends React.PureComponent {
         disabled={disabled}
         onClick={this.handleOnClick}
         labelSize={undefined}
-        radioSize={28}
+        radioSize={22}
       />
     ));
 

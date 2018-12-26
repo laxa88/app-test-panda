@@ -114,11 +114,11 @@ exports[`<UserRegistration /> renders 1`] = `
           >
             <div
               checked={false}
-              className="sc-ifAKCX eUabxL"
+              className="sc-ifAKCX gVhslb"
             >
               <div
                 checked={false}
-                className="sc-EHOje cgaWYt"
+                className="sc-EHOje eXoKJA"
               />
             </div>
             <div
@@ -135,11 +135,11 @@ exports[`<UserRegistration /> renders 1`] = `
           >
             <div
               checked={false}
-              className="sc-ifAKCX eUabxL"
+              className="sc-ifAKCX gVhslb"
             >
               <div
                 checked={false}
-                className="sc-EHOje cgaWYt"
+                className="sc-EHOje eXoKJA"
               />
             </div>
             <div
@@ -156,11 +156,11 @@ exports[`<UserRegistration /> renders 1`] = `
           >
             <div
               checked={false}
-              className="sc-ifAKCX eUabxL"
+              className="sc-ifAKCX gVhslb"
             >
               <div
                 checked={false}
-                className="sc-EHOje cgaWYt"
+                className="sc-EHOje eXoKJA"
               />
             </div>
             <div

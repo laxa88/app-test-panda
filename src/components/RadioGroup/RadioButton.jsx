@@ -42,8 +42,8 @@ export const StyledDot = styled.div`
   ${props => (props.checked ? '' : 'opacity: 0;')}
   background-color: ${props => props.theme.textColor1};
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: ${props => (props.radioSize ? props.radioSize / 2 : 12.5)}px;
+  height: ${props => (props.radioSize ? props.radioSize / 2 : 12.5)}px;
 `;
 
 export const StyledLabel = styled.div`
