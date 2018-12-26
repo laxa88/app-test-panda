@@ -190,21 +190,6 @@ exports[`<UserRegistration /> renders 1`] = `
             <div
               className="sc-iwsKbI exYeGo"
             >
-              Sun
-            </div>
-          </div>
-          <div
-            className="sc-gZMcBi geaYPW"
-          >
-            <button
-              checked={false}
-              className="sc-gzVnrw hzWFXE"
-              disabled={false}
-              onClick={[Function]}
-            />
-            <div
-              className="sc-iwsKbI exYeGo"
-            >
               Mon
             </div>
           </div>
@@ -281,6 +266,21 @@ exports[`<UserRegistration /> renders 1`] = `
               className="sc-iwsKbI exYeGo"
             >
               Sat
+            </div>
+          </div>
+          <div
+            className="sc-gZMcBi geaYPW"
+          >
+            <button
+              checked={false}
+              className="sc-gzVnrw hzWFXE"
+              disabled={false}
+              onClick={[Function]}
+            />
+            <div
+              className="sc-iwsKbI exYeGo"
+            >
+              Sun
             </div>
           </div>
         </div>
