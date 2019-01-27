@@ -1,5 +1,9 @@
 # Test App
 
+## Live Demo
+
+https://laxa88.github.io/app-test-panda/
+
 ## Goal
 
 Write a simple React App based on provided UI mockup.
